@@ -1,0 +1,126 @@
+#carouselExampleSlidesOnly {
+  width: 600px;
+  height: 300px;
+
+  position: fixed;
+  top: 33%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+}
+
+#carouselExampleSlidesOnly .carousel-inner,
+#carouselExampleSlidesOnly .carousel-item {
+  width: 600px;
+  height: 300px;
+}
+
+#carouselExampleSlidesOnly img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+#FondoCarrusel {
+  background-color: #12263a;
+  width: 1440px;
+  height: 400px;
+}
+#texto1 {
+  color: white;
+  width: 700px;
+  font-weight: bold;
+  font-size: 60px;
+  position: fixed;
+  text-align: left;
+  top: 17%;
+  left: 46%;
+}
+#texto2 {
+  color: white;
+  width: 420px;
+  position: fixed;
+  font-size: 17px;
+  text-align: left;
+  top: 40%;
+  left: 46%;
+}
+
+.buscador {
+  width: 100%;
+  background-color: white;
+
+  padding: 16px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: end;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.campo {
+  flex: 1;
+}
+
+.campo label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  color: #456;
+}
+
+.campo select,
+.campo input {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5dfe2;
+  border-radius: 10px;
+
+  background-color: #f7f9f9;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  color: #456;
+}
+
+.btn-buscar {
+  height: 66px;
+
+  padding: 0 25px;
+
+  border: none;
+  border-radius: 11px;
+
+  background-color: #117987;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn-buscar:hover {
+  background-color: #0d6874;
+}
+
+.buscador {
+  position: relative;
+  top: -40px;
+  left: 0;
+}
