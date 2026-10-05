@@ -3,15 +3,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 24px;
-  background: #153243;
-  color: #B4B8AB;
+  background: #FFFFFF;
+  color: #0F1E36;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #B4B8AB;
+  color: #0F1E36;
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;
@@ -31,7 +31,7 @@
 }
 
 .links a {
-  color: #d6eef0;
+  color: #0F1E36;
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 6px;
@@ -42,24 +42,8 @@
 }
 
 .links a.activo {
-  background: #fff;
-  color: #0a525b;
+  background: #0F1E36;
+  color: #FFFFFF;
   font-weight: 600;
 }
 
-.badge {
-  background: #f4b823;
-  color: #12263a;
-  border-radius: 99px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 1px 7px;
-  margin-left: 4px;
-}
-
-@media (max-width: 560px) {
-  .navbar {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
