@@ -1,0 +1,13 @@
+<header class="navbar">
+  <a routerLink="/" class="logo" aria-label="Roomly, inicio">
+    <i></i><span>Roomly</span>
+  </a>
+
+  <nav class="links" aria-label="Principal">
+    <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+    <a routerLink="/alojamientos" routerLinkActive="activo">Alojamientos</a>
+    <a routerLink="/mis-reservas" routerLinkActive="activo">
+      Mis reservas
+    </a>
+  </nav>
+</header>
