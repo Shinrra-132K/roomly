@@ -1,65 +1,94 @@
-<div id="FondoCarrusel">
-<div id="carouselExampleSlidesOnly"
-     class="carousel slide"
-     data-bs-ride="carousel"
-     data-bs-interval="2000">
+<section class="hero">
+  <img class="hero-img" src="/assets/imagen4.jpg" alt="Cabaña rodeada de naturaleza">
+  <div class="hero-capa"></div>
 
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="assets/imagen1.jpg" alt="imagen1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="assets/imagen2.jpg" alt="imagen2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="assets/imagen3.jpg" alt="imagen3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="assets/imagen4.jpg" alt="imagen4">
-    </div>
-
+  <div class="hero-contenido">
+    <h1 class="hero-titulo">roomly</h1>
+    <p class="hero-descripcion">
+      encuentra cabañas, casas y apartamentos para tu próxima escapada.
+      elige tus fechas, cotiza al instante y reserva en pocos pasos.
+    </p>
+    <a class="hero-boton" href="/alojamientos">ver alojamientos</a>
   </div>
-</div>
-    <h1 id="texto1">Encuentra donde quedarte en colombia</h1>
-    <p id="texto2">Apartamentos, cabañas y casas administrados por Inversiones LR. Elige fechas, mira el total y reserva en minutos.</p>
-</div>
+</section>
 
-<div class="buscador">
+<section class="destacados">
 
-  <div class="campo">
-    <label>Ciudad</label>
-    <select>
-      <option>Todas</option>
-      <option>Bogotá</option>
-      <option>Medellín</option>
-      <option>Cartagena</option>
-      <option>Cali</option>
-      <option>Santa Marta</option>
-      <option>Pereira</option>
-    </select>
+  <div class="destacados-cabecera">
+    <h2 class="destacados-titulo">Alojamientos destacados</h2>
+    <svg class="destacados-zigzag" viewBox="0 0 120 24" aria-hidden="true">
+      <path d="M0 10 L10 2 L20 10 L30 2 L40 10 L50 2 L60 10 L70 2 L80 10 L90 2 L100 10 L110 2 L120 10"/>
+      <path d="M0 22 L10 14 L20 22 L30 14 L40 22 L50 14 L60 22 L70 14 L80 22 L90 14 L100 22 L110 14 L120 22"/>
+    </svg>
   </div>
 
-  <div class="campo">
-    <label>Huéspedes</label>
-    <input type="number" placeholder="Cuántos">
+  <div class="destacados-lista">
+
+    <a class="tarjeta" href="/alojamientos/1">
+      <div class="tarjeta-media">
+        <img class="tarjeta-img" src="/assets/imagen1.jpg" alt="Loft moderno en Chapinero">
+        <span class="tarjeta-tipo">Apartamento</span>
+      </div>
+      <div class="tarjeta-cuerpo">
+        <h3 class="tarjeta-nombre">Loft moderno en Chapinero</h3>
+        <p class="tarjeta-ubicacion">Bogotá · hasta 2 huéspedes</p>
+        <p class="tarjeta-texto">Loft moderno ubicado cerca de restaurantes, cafés y zonas comerciales de Bogotá.</p>
+        <ul class="tarjeta-servicios">
+          <li>Wi-Fi</li>
+          <li>Cocina</li>
+          <li>Televisión</li>
+        </ul>
+      </div>
+      <div class="tarjeta-pie">
+        <p class="tarjeta-precio"><strong>$180.000</strong> / noche</p>
+        <p class="tarjeta-calificacion">4,8 ★</p>
+      </div>
+    </a>
+
+    <a class="tarjeta" href="/alojamientos/2">
+      <div class="tarjeta-media">
+        <img class="tarjeta-img" src="/assets/imagen2.jpg" alt="Apartamento frente al mar">
+        <span class="tarjeta-tipo">Apartamento</span>
+      </div>
+      <div class="tarjeta-cuerpo">
+        <h3 class="tarjeta-nombre">Apartamento frente al mar</h3>
+        <p class="tarjeta-ubicacion">Cartagena · hasta 5 huéspedes</p>
+        <p class="tarjeta-texto">Apartamento con vista al mar ubicado en una zona turística de Cartagena.</p>
+        <ul class="tarjeta-servicios">
+          <li>Wi-Fi</li>
+          <li>Piscina</li>
+          <li>Aire acondicionado</li>
+        </ul>
+      </div>
+      <div class="tarjeta-pie">
+        <p class="tarjeta-precio"><strong>$420.000</strong> / noche</p>
+        <p class="tarjeta-calificacion">4,9 ★</p>
+      </div>
+    </a>
+
+    <a class="tarjeta" href="/alojamientos/3">
+      <div class="tarjeta-media">
+        <img class="tarjeta-img" src="/assets/place1.jpeg" alt="Cabaña en Guatapé">
+        <span class="tarjeta-tipo">Cabaña</span>
+      </div>
+      <div class="tarjeta-cuerpo">
+        <h3 class="tarjeta-nombre">Cabaña en Guatapé</h3>
+        <p class="tarjeta-ubicacion">Guatapé · hasta 6 huéspedes</p>
+        <p class="tarjeta-texto">Cabaña rodeada de naturaleza con vista al embalse de Guatapé.</p>
+        <ul class="tarjeta-servicios">
+          <li>Wi-Fi</li>
+          <li>Cocina</li>
+          <li>BBQ</li>
+        </ul>
+      </div>
+      <div class="tarjeta-pie">
+        <p class="tarjeta-precio"><strong>$350.000</strong> / noche</p>
+        <p class="tarjeta-calificacion">4,7 ★</p>
+      </div>
+    </a>
+
   </div>
 
-  <div class="campo">
-    <label>Tipo</label>
-    <select>
-      <option>Todos</option>
-      <option>Casa</option>
-      <option>Apartamento</option>
-      <option>Cabaña</option>
-    </select>
-  </div>
+  <a class="destacados-enlace" href="/alojamientos">ver todos los alojamientos</a>
 
-  <button class="btn-buscar">
-    Buscar alojamientos
-  </button>
-
-</div>
+</section>

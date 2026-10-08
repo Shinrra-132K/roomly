@@ -1,0 +1,129 @@
+:host {
+  display: block;
+  background-color: #6c2c2d;
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+.footer-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem 3rem;
+}
+
+.footer-marca {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-marca-img {
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-marca-nombre {
+  display: block;
+  color: #F9E6D5;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.footer-marca-lema {
+  max-width: 11rem;
+  margin: 0.75rem 0 0;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer-linea {
+  align-self: stretch;
+  width: 2px;
+  min-height: 160px;
+  background-color: #FFFFFF;
+}
+
+.footer-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.footer-contacto-datos {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.footer-enlace {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-enlace:hover {
+  text-decoration: underline;
+}
+
+.footer-telefono {
+  color: #FFFFFF;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-red {
+  display: block;
+  width: 77px;
+  height: 68px;
+  background-color: #C9D0DA;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.footer-red:hover {
+  background-color: #F9E6D5;
+}
+
+.footer-marca-nombre:focus-visible,
+.footer-enlace:focus-visible,
+.footer-red:focus-visible {
+  outline: 3px solid #F9E6D5;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  .footer-contenido {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-marca {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-marca-lema {
+    max-width: none;
+  }
+
+  .footer-linea {
+    align-self: auto;
+    width: 80%;
+    height: 2px;
+    min-height: 0;
+  }
+}
