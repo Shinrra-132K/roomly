@@ -23,9 +23,11 @@ interface Alojamiento {
 })
 export class Alojamientocomponent {
   paisSeleccionado: string = 'Colombia';
+  tipoAlojamiento: string = '';
   ciudadSeleccionada: string = '';
   precioMinimo: number | null = null;
   precioMaximo: number | null = null;
+  numeroHuespedes: number | null = null;
 
   ciudades: string[] = [
     'Bogotá',
@@ -39,6 +41,14 @@ export class Alojamientocomponent {
     'San Andrés',
     'Manizales'
   ];
+  tipos: string[] = [
+    'Apartamento',
+    'Casa',
+    'Casa campestre',
+    'Casa colonial',
+    'Cabaña',
+    'Finca'
+  ]
 
   alojamientos: Alojamiento[] = [
     {
@@ -50,7 +60,7 @@ export class Alojamientocomponent {
       tipo: 'Cabaña',
       huespedes: 4,
       precio: 280000,
-      imagen: 'assets/imagen1.jpg',
+      imagen: 'assets/guatape.jpeg',
       descripcion: 'Disfruta de una cabaña acogedora con una hermosa vista al embalse de Guatapé.',
       servicios: ['WiFi', 'Cocina', 'Parqueadero'],
       calificacion: 4.9
@@ -64,7 +74,7 @@ export class Alojamientocomponent {
       tipo: 'Casa campestre',
       huespedes: 6,
       precio: 350000,
-      imagen: 'assets/imagen2.jpg',
+      imagen: 'assets/casa.jpeg',
       descripcion: 'Una casa ideal para descansar en familia y conocer los paisajes de Guatapé.',
       servicios: ['Piscina', 'WiFi', 'Zona BBQ'],
       calificacion: 4.8
@@ -78,7 +88,7 @@ export class Alojamientocomponent {
       tipo: 'Apartamento',
       huespedes: 3,
       precio: 190000,
-      imagen: 'assets/places1.jpg',
+      imagen: 'assets/poblado.jpeg',
       descripcion: 'Apartamento moderno, cerca de restaurantes, comercios y lugares turísticos.',
       servicios: ['WiFi', 'Cocina', 'TV'],
       calificacion: 4.7
@@ -92,7 +102,7 @@ export class Alojamientocomponent {
       tipo: 'Apartamento',
       huespedes: 2,
       precio: 160000,
-      imagen: 'assets/imagen3.jpg',
+      imagen: 'assets/bogota.jpeg',
       descripcion: 'Alojamiento cómodo para descubrir la capital de Colombia.',
       servicios: ['WiFi', 'TV', 'Cocina'],
       calificacion: 4.6
@@ -106,7 +116,7 @@ export class Alojamientocomponent {
       tipo: 'Casa',
       huespedes: 5,
       precio: 420000,
-      imagen: 'assets/imagen4.jpg',
+      imagen: 'assets/vistaalmar.jpeg',
       descripcion: 'Descansa cerca de las playas y disfruta del ambiente del Caribe colombiano.',
       servicios: ['Piscina', 'WiFi', 'Aire acondicionado'],
       calificacion: 4.9
@@ -120,7 +130,7 @@ export class Alojamientocomponent {
       tipo: 'Cabaña',
       huespedes: 4,
       precio: 240000,
-      imagen: 'assets/place2.jpg',
+      imagen: 'assets/tropical.jpeg',
       descripcion: 'Un espacio tranquilo para disfrutar de la naturaleza y el mar.',
       servicios: ['Jardín', 'WiFi', 'Cocina'],
       calificacion: 4.8
@@ -134,7 +144,7 @@ export class Alojamientocomponent {
       tipo: 'Apartamento',
       huespedes: 3,
       precio: 130000,
-      imagen: 'assets/cali1.jpg',
+      imagen: 'assets/cali.jpeg',
       descripcion: 'Un alojamiento práctico para explorar la cultura y gastronomía caleña.',
       servicios: ['WiFi', 'TV', 'Cocina'],
       calificacion: 4.5
@@ -148,7 +158,7 @@ export class Alojamientocomponent {
       tipo: 'Casa colonial',
       huespedes: 6,
       precio: 310000,
-      imagen: 'assets/imagen2.jpg',
+      imagen: 'assets/colonial.jpeg',
       descripcion: 'Una casa con encanto colonial para disfrutar de la historia y tranquilidad del pueblo.',
       servicios: ['Patio', 'Cocina', 'WiFi'],
       calificacion: 4.8
@@ -162,7 +172,7 @@ export class Alojamientocomponent {
       tipo: 'Cabaña',
       huespedes: 2,
       precio: 260000,
-      imagen: 'assets/imagen1.jpg',
+      imagen: 'assets/cabaña.jpeg',
       descripcion: 'Un lugar acogedor para disfrutar de las playas y el mar de los siete colores.',
       servicios: ['Aire acondicionado', 'WiFi', 'Terraza'],
       calificacion: 4.7
@@ -176,7 +186,7 @@ export class Alojamientocomponent {
       tipo: 'Finca',
       huespedes: 5,
       precio: 290000,
-      imagen: 'assets/pereira1.jpg',
+      imagen: 'assets/finca.jpeg',
       descripcion: 'Vive una experiencia rodeada de montañas, naturaleza y cafetales.',
       servicios: ['Jardín', 'Parqueadero', 'Cocina'],
       calificacion: 4.9
@@ -189,6 +199,16 @@ export class Alojamientocomponent {
         this.ciudadSeleccionada === '' ||
         alojamiento.ciudad === this.ciudadSeleccionada;
 
+      const coincideTipo =
+        this.tipoAlojamiento === '' ||
+        alojamiento.tipo === this.tipoAlojamiento;
+
+      const coincideHuespedes =
+        this.numeroHuespedes === null ||
+        this.numeroHuespedes === undefined ||
+        this.numeroHuespedes === 0 ||
+        alojamiento.huespedes >= this.numeroHuespedes;
+
       const coincidePrecioMinimo =
         this.precioMinimo === null ||
         this.precioMinimo === undefined ||
@@ -200,12 +220,20 @@ export class Alojamientocomponent {
         this.precioMaximo === 0 ||
         alojamiento.precio <= this.precioMaximo;
 
-      return coincideCiudad && coincidePrecioMinimo && coincidePrecioMaximo;
+      return (
+        coincideCiudad &&
+        coincideTipo &&
+        coincideHuespedes &&
+        coincidePrecioMinimo &&
+        coincidePrecioMaximo
+      );
     });
   }
 
   limpiarFiltros(): void {
     this.ciudadSeleccionada = '';
+    this.tipoAlojamiento = '';
+    this.numeroHuespedes = null;
     this.precioMinimo = null;
     this.precioMaximo = null;
   }

@@ -1,5 +1,4 @@
 <main class="explorar">
-
   <section class="explorar-encabezado">
     <span class="etiqueta">DESCUBRE NUEVOS LUGARES</span>
 
@@ -45,6 +44,29 @@
         min="0"
         placeholder="Sin límite"
         [(ngModel)]="precioMaximo">
+    </div>
+
+    <div class="filtro">
+      <label for="huespedes">Número de huéspedes</label>
+
+      <input
+        id="huespedes"
+        type="number"
+        min="1"
+        placeholder="Cantidad de personas"
+        [(ngModel)]="numeroHuespedes">
+    </div>
+
+    <div class="filtro">
+      <label for="tipo">Tipo de alojamiento</label>
+
+      <select id="tipo" [(ngModel)]="tipoAlojamiento">
+        <option value="">Todos los tipos</option>
+
+        <option *ngFor="let tipo of tipos" [value]="tipo">
+          {{ tipo }}
+        </option>
+      </select>
     </div>
 
     <button

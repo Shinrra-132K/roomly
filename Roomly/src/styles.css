@@ -8,3 +8,6 @@ app-root {
 main {
   flex: 1;
 }
+html {
+  container-type: scroll-state;
+}
