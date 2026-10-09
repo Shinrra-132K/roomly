@@ -1,0 +1,163 @@
+<main class="explorar">
+
+  <section class="explorar-encabezado">
+    <span class="etiqueta">DESCUBRE NUEVOS LUGARES</span>
+
+    <h1>Encuentra tu próximo destino</h1>
+
+    <p>
+      Explora alojamientos únicos en ciudades como Guatapé,
+      Medellín, Bogotá, Cartagena y muchos otros destinos.
+    </p>
+  </section>
+
+  <section class="filtros">
+
+    <div class="filtro">
+      <label for="ciudad">Ciudad o destino</label>
+
+      <select id="ciudad" [(ngModel)]="ciudadSeleccionada">
+        <option value="">Todas las ciudades</option>
+
+        <option *ngFor="let ciudad of ciudades" [value]="ciudad">
+          {{ ciudad }}
+        </option>
+      </select>
+    </div>
+
+    <div class="filtro">
+      <label for="precioMinimo">Precio mínimo por noche</label>
+
+      <input
+        id="precioMinimo"
+        type="number"
+        min="0"
+        placeholder="$ 0"
+        [(ngModel)]="precioMinimo">
+    </div>
+
+    <div class="filtro">
+      <label for="precioMaximo">Precio máximo por noche</label>
+
+      <input
+        id="precioMaximo"
+        type="number"
+        min="0"
+        placeholder="Sin límite"
+        [(ngModel)]="precioMaximo">
+    </div>
+
+    <button
+      class="boton-limpiar"
+      type="button"
+      (click)="limpiarFiltros()">
+      Limpiar filtros
+    </button>
+
+  </section>
+
+  <section class="resultados">
+
+    <div class="resultados-encabezado">
+      <div>
+        <h2>Alojamientos para descubrir</h2>
+
+        <p>
+          {{ alojamientosFiltrados.length }}
+          alojamientos encontrados
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="alojamientos-grid"
+      *ngIf="alojamientosFiltrados.length > 0">
+
+      <article
+        class="alojamiento-card"
+        *ngFor="let alojamiento of alojamientosFiltrados">
+
+        <div class="imagen-contenedor">
+
+          <img
+            [src]="alojamiento.imagen"
+            [alt]="alojamiento.nombre"
+            class="alojamiento-imagen">
+
+          <span class="tipo">
+            {{ alojamiento.tipo }}
+          </span>
+
+        </div>
+
+        <div class="alojamiento-info">
+
+          <div class="ciudad">
+            📍 {{ alojamiento.ciudad }},
+            {{ alojamiento.departamento }}
+          </div>
+
+          <h3>{{ alojamiento.nombre }}</h3>
+
+          <p class="descripcion">
+            {{ alojamiento.descripcion }}
+          </p>
+
+          <div class="detalles">
+            <span>
+              👥 {{ alojamiento.huespedes }} huéspedes
+            </span>
+
+            <span>
+              ⭐ {{ alojamiento.calificacion }}
+            </span>
+          </div>
+
+          <div class="servicios">
+            <span *ngFor="let servicio of alojamiento.servicios">
+              {{ servicio }}
+            </span>
+          </div>
+
+          <div class="precio-contenedor">
+
+            <div class="precio">
+              {{ formatearPrecio(alojamiento.precio) }}
+              <small>/ noche</small>
+            </div>
+
+            <a
+              class="boton-ver"
+              [routerLink]="['/alojamientos', alojamiento.id]">
+              Ver alojamiento
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div
+      class="sin-resultados"
+      *ngIf="alojamientosFiltrados.length === 0">
+
+      <h3>No encontramos alojamientos</h3>
+
+      <p>
+        Prueba con otra ciudad o modifica el rango de precios.
+      </p>
+
+      <button
+        type="button"
+        (click)="limpiarFiltros()">
+        Ver todos los alojamientos
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
