@@ -26,6 +26,7 @@
 .navbar a {
   color: #1A1A1A;
   text-decoration: none;
+  font-family: "slither", sans-serif;
 }
 
 .navbar a:focus-visible,

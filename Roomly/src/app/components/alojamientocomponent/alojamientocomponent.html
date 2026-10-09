@@ -150,7 +150,7 @@
 
             <a
               class="boton-ver"
-              [routerLink]="['/alojamientos', alojamiento.id]">
+              [routerLink]="['/detalle', alojamiento.id]">
               Ver detalles
             </a>
 
@@ -167,7 +167,7 @@
       *ngIf="alojamientosFiltrados.length === 0">
 
       <h3>No encontramos alojamientos</h3>
-
+      <img class="notfound-img" src="/assets/notfound.png" alt="">
       <p>
         Ups. No hay alojamientos con esas especificaciones, modificalas para encontrar nuevas opciones.
       </p>

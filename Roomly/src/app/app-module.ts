@@ -9,6 +9,7 @@ import { Navbarcomponent } from './components/navbarcomponent/navbarcomponent';
 import { Footercomponent } from './components/footercomponent/footercomponent';
 import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
 import { Alojamientocomponent } from './components/alojamientocomponent/alojamientocomponent';
+import { Detallecomponent } from './components/detallecomponent/detallecomponent';
 
 @NgModule({
   declarations: [
@@ -16,21 +17,14 @@ import { Alojamientocomponent } from './components/alojamientocomponent/alojamie
     Navbarcomponent,
     Footercomponent,
     Iniciocomponent,
-    Alojamientocomponent
+    Alojamientocomponent,
+    Detallecomponent,
   ],
 
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
 
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
+  providers: [provideBrowserGlobalErrorListeners()],
 
-  bootstrap: [
-    App
-  ]
+  bootstrap: [App],
 })
 export class AppModule {}

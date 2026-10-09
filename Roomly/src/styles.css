@@ -11,3 +11,16 @@ main {
 html {
   container-type: scroll-state;
 }
+
+@font-face {
+  font-family: "bakery simple";
+  src: url("/assets/fonts/Bakery.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "slither";
+  src: url("/assets/fonts/Slither.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

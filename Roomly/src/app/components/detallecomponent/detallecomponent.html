@@ -1,0 +1,283 @@
+<main class="detalle">
+
+  <div class="detalle-nav">
+    <a class="volver" routerLink="/alojamientos">
+      <svg class="icono" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Volver a alojamientos
+    </a>
+  </div>
+
+  <section class="fila fila-hero">
+
+    <input type="radio" name="foto" id="foto1" class="control" aria-label="Foto 1">
+    <input type="radio" name="foto" id="foto2" class="control" aria-label="Foto 2">
+    <input type="radio" name="foto" id="foto3" class="control" aria-label="Foto 3">
+
+    <div class="carrusel" style="--n: 3">
+      <div class="carrusel-pista">
+        <img src="assets/Loft.jpeg" alt="Vista 1 del Loft moderno en Chapinero">
+        <img src="assets/bogota.jpeg" alt="Vista 2 del Loft moderno en Chapinero">
+        <img src="assets/icon.png" alt="Vista 3 del Loft moderno en Chapinero">
+      </div>
+
+      <div class="carrusel-sombra"></div>
+
+      <div class="carrusel-titulo">
+
+        <h1>Loft moderno en Chapinero</h1>
+        <p>
+          <svg class="icono" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Chapinero, Bogotá
+        </p>
+        <div class="carrusel-etiquetas">
+          <span class="insignia">Apartamento</span>
+        </div>
+      </div>
+
+      <div class="carrusel-puntos">
+        <label for="foto1" style="--k: 0" aria-label="Ir a la foto 1"></label>
+        <label for="foto2" style="--k: 1" aria-label="Ir a la foto 2"></label>
+        <label for="foto3" style="--k: 2" aria-label="Ir a la foto 3"></label>
+      </div>
+
+      <div class="carrusel-progreso"></div>
+    </div>
+
+    <aside class="panel panel-servicios">
+      <div>
+        <h2>Servicios del lugar</h2>
+        <p class="panel-texto">Todo lo que incluye tu estancia.</p>
+      </div>
+      <input type="radio" name="servicio" id="serv1" class="control" aria-label="Wi-Fi">
+      <input type="radio" name="servicio" id="serv2" class="control" aria-label="Cocina">
+      <input type="radio" name="servicio" id="serv3" class="control" aria-label="Televisión">
+      <input type="radio" name="servicio" id="serv4" class="control" aria-label="Lavadora">
+
+      <div class="servicios-visor" style="--n: 8">
+        <div class="serv-puntos" style="--m: 4">
+          <label for="serv1" style="--k: 0" aria-label="Ver Wi-Fi"></label>
+          <label for="serv2" style="--k: 1" aria-label="Ver Cocina"></label>
+          <label for="serv3" style="--k: 2" aria-label="Ver Televisión"></label>
+          <label for="serv4" style="--k: 3" aria-label="Ver Lavadora"></label>
+        </div>
+
+        <div class="serv-slider" role="group" aria-label="Servicios disponibles">
+          <label for="serv1" class="serv" style="--i: 0">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></span>
+            <span class="serv-nombre">Wi-Fi</span>
+          </label>
+          <label for="serv2" class="serv" style="--i: 1">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></span>
+            <span class="serv-nombre">Cocina</span>
+          </label>
+          <label for="serv3" class="serv" style="--i: 2">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></span>
+            <span class="serv-nombre">Televisión</span>
+          </label>
+          <label for="serv4" class="serv" style="--i: 3">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg></span>
+            <span class="serv-nombre">Lavadora</span>
+          </label>
+
+          <label for="serv1" class="serv" style="--i: 4" aria-hidden="true">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></span>
+            <span class="serv-nombre">Wi-Fi</span>
+          </label>
+          <label for="serv2" class="serv" style="--i: 5" aria-hidden="true">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></span>
+            <span class="serv-nombre">Cocina</span>
+          </label>
+          <label for="serv3" class="serv" style="--i: 6" aria-hidden="true">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></span>
+            <span class="serv-nombre">Televisión</span>
+          </label>
+          <label for="serv4" class="serv" style="--i: 7" aria-hidden="true">
+            <span class="serv-circulo"><svg class="icono" viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg></span>
+            <span class="serv-nombre">Lavadora</span>
+          </label>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="fila fila-detalle">
+
+    <div class="panel panel-info">
+      <h2>Sobre este alojamiento</h2>
+      <p class="texto">
+        Loft moderno ubicado cerca de restaurantes, cafés y zonas comerciales de Bogotá.
+      </p>
+
+      <dl class="ficha">
+        <div><dt>Tipo de alojamiento</dt><dd>Apartamento</dd></div>
+        <div><dt>Ciudad</dt><dd>Bogotá</dd></div>
+        <div><dt>Ubicación</dt><dd>Chapinero, Bogotá</dd></div>
+        <div><dt>Capacidad</dt><dd>2 huéspedes</dd></div>
+        <div><dt>Calificación</dt><dd>4.8 de 5</dd></div>
+      </dl>
+
+      <h3>Reglas del lugar</h3>
+      <ul class="reglas">
+        <li>No fumar</li>
+        <li>No se permiten fiestas</li>
+      </ul>
+    </div>
+
+    <aside class="panel panel-costo" aria-label="Costo de la estancia">
+      <div class="costo-cabecera">
+        <span class="costo-etiqueta">Precio por noche</span>
+        <div class="costo-precio">$180.000 <small>COP</small></div>
+      </div>
+
+      <div class="costo-campo">
+        <label for="llegada">Fecha de llegada</label>
+        <input type="date" id="llegada" name="llegada">
+      </div>
+
+      <div class="contador">
+        <div>
+          <strong>Noches</strong>
+          <span>Salida: 15 oct 2026</span>
+        </div>
+        <div class="contador-control">
+          <button type="button" aria-label="Quitar una noche">−</button>
+          <output>3</output>
+          <button type="button" aria-label="Agregar una noche">+</button>
+        </div>
+      </div>
+
+      <div class="contador">
+        <div>
+          <strong>Huéspedes</strong>
+          <span>Máximo 2</span>
+        </div>
+        <div class="contador-control">
+          <button type="button" aria-label="Quitar un huésped">−</button>
+          <output>2</output>
+          <button type="button" aria-label="Agregar un huésped">+</button>
+        </div>
+      </div>
+
+      <div class="mensaje-error" role="alert">
+        La fecha de llegada no puede ser anterior a hoy.
+      </div>
+
+      <ul class="desglose">
+        <li><span>$180.000 × 3 noches</span><span>$540.000</span></li>
+        <li><span>Tarifa de limpieza</span><span>$45.000</span></li>
+        <li><span>Tarifa de servicio (10 %)</span><span>$54.000</span></li>
+      </ul>
+
+      <div class="costo-total">
+        <span>Total</span>
+        <strong>$639.000</strong>
+      </div>
+    </aside>
+    <div class="panel panel-reserva">
+      <h2>Reserva tu estancia</h2>
+      <p class="panel-texto">
+        Prueba cómo quedaría tu reserva o resérvala ahora con los datos de arriba.
+      </p>
+
+      <div class="reserva-botones">
+        <button type="button" class="boton boton-contorno">Simular reserva</button>
+        <button type="button" class="boton boton-cobre">Reservar ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="fila fila-resenas">
+
+
+
+    <aside class="panel panel-resenas">
+      <div class="resenas-cabecera">
+        <h2>Reseñas</h2>
+        <span class="resenas-nota">4.8 <small>★</small></span>
+      </div>
+
+      <div class="resenas-lista">
+        <article class="resena">
+          <p>Excelente ubicación y apartamento muy cómodo.</p>
+          <div class="resena-autor">
+            <span class="avatar">L</span>
+            <div>
+              <strong>Laura Gómez</strong>
+              <span class="estrellas">★★★★★</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="resena">
+          <p>Muy buena experiencia.</p>
+          <div class="resena-autor">
+            <span class="avatar">C</span>
+            <div>
+              <strong>Carlos Ruiz</strong>
+              <span class="estrellas">★★★★<span class="vacia">★</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Sin reseñas
+      <div class="sin-datos">Todavía no hay reseñas para este alojamiento.</div>
+      -->
+    </aside>
+  </section>
+
+  <section class="similares">
+    <div class="similares-cabecera">
+      <h2>Lugares similares</h2>
+      <a routerLink="/alojamientos">Ver todos</a>
+    </div>
+
+    <div class="similares-grid">
+      <article class="similar-card">
+        <div class="similar-imagen">
+          <img src="assets/images/medellin.jpg" alt="Apartamento ejecutivo Medellín">
+          <span class="similar-tipo">Apartamento</span>
+        </div>
+        <div class="similar-info">
+          <span class="similar-ciudad">Medellín</span>
+          <h3>Apartamento ejecutivo Medellín</h3>
+          <div class="similar-pie">
+            <span class="similar-precio">$230.000 <small>/ noche</small></span>
+            <a class="similar-ver" [routerLink]="['/detalle', 5]">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="similar-card">
+        <div class="similar-imagen">
+          <img src="assets/images/cartagena.jpg" alt="Apartamento frente al mar">
+          <span class="similar-tipo">Apartamento</span>
+        </div>
+        <div class="similar-info">
+          <span class="similar-ciudad">Cartagena</span>
+          <h3>Apartamento frente al mar</h3>
+          <div class="similar-pie">
+            <span class="similar-precio">$420.000 <small>/ noche</small></span>
+            <a class="similar-ver" [routerLink]="['/detalle', 2]">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="similar-card">
+        <div class="similar-imagen">
+          <img src="assets/images/guatape.jpg" alt="Cabaña en Guatapé">
+          <span class="similar-tipo">Cabaña</span>
+        </div>
+        <div class="similar-info">
+          <span class="similar-ciudad">Guatapé</span>
+          <h3>Cabaña en Guatapé</h3>
+          <div class="similar-pie">
+            <span class="similar-precio">$350.000 <small>/ noche</small></span>
+            <a class="similar-ver" [routerLink]="['/detalle', 3]">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>

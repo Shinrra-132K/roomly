@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Iniciocomponent } from './components/iniciocomponent/iniciocomponent';
 import { Alojamientocomponent } from './components/alojamientocomponent/alojamientocomponent';
+import {Detallecomponent} from './components/detallecomponent/detallecomponent';
+
 
 const routes: Routes = [
 
@@ -15,11 +17,15 @@ const routes: Routes = [
     path: 'alojamientos',
     component: Alojamientocomponent
   },
-
+  {
+    path: 'detalle/:id',
+    component: Detallecomponent
+  },
   {
     path: '**',
     redirectTo: ''
   }
+
 
 ];
 
