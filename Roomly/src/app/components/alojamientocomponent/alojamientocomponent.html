@@ -90,10 +90,22 @@
         </p>
       </div>
     </div>
+    <div class="sin-resultados" *ngIf="cargando">
+      <p>Cargando alojamientos...</p>
+    </div>
+    <div class="sin-resultados" *ngIf="errorCarga">
+      <h3>No pudimos cargar los alojamientos</h3>
+      <p>Verifica la conexión y vuelve a intentarlo.</p>
+
+      <button type="button" (click)="cargarAlojamientos()">
+        Intentar nuevamente
+      </button>
+    </div>
+
 
     <div
       class="alojamientos-grid"
-      *ngIf="alojamientosFiltrados.length > 0">
+      *ngIf="!cargando && !errorCarga && alojamientosFiltrados.length > 0">
 
       <article
         class="alojamiento-card"
@@ -164,7 +176,7 @@
 
     <div
       class="sin-resultados"
-      *ngIf="alojamientosFiltrados.length === 0">
+      *ngIf="!cargando && !errorCarga && alojamientosFiltrados.length === 0">
 
       <h3>No encontramos alojamientos</h3>
       <img class="notfound-img" src="/assets/notfound.png" alt="">
