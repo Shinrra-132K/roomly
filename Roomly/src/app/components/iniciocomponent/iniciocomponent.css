@@ -1,87 +1,173 @@
-:host {
-  display: block;
-  font-family: 'Poppins', system-ui, sans-serif;
-}
-
-.hero {
+.start {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 75vh;
+  height: 600px;
   overflow: hidden;
-  background-color: #4B5A39;
+  background-color: #1e1210;
 }
 
-.hero-img {
+.start-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 40%;
 }
 
-.hero-capa {
+.start-capa {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(20, 28, 14, 0.78) 0%, rgba(20, 28, 14, 0.4) 55%, rgba(20, 28, 14, 0.1) 100%);
+  /*background: linear-gradient(90deg, #be8a84 0%, #7e4b4c 55%, #1e1210 100%);*/
 }
 
-.hero-contenido {
+.start-contenido {
+  margin-top: 130px;
   position: relative;
   max-width: 600px;
+  align-items: center;
   padding: 3rem 4rem;
 }
-
-.hero-titulo {
-  margin: 0 0 1rem;
+.start-titulo {
+  margin: 0 0 0.5rem;
   color: #F9E6D5;
-  font-size: clamp(3.5rem, 9vw, 6.5rem);
-  font-weight: 700;
+  font-size: 120px;
   line-height: 1;
+  align-items: center;
   letter-spacing: -0.03em;
 }
 
-.hero-descripcion {
+
+.start-descripcion {
   max-width: 34rem;
   margin: 0 0 2rem;
-  color: #FFFFFF;
+  color: #e8e5e3;
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.6;
+  align-items: center;
 }
 
-.hero-boton {
-  display: inline-block;
-  padding: 0.9rem 2.2rem;
-  background-color: #F29A4B;
-  border-radius: 999px;
-  color: #1A1A1A;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
+.descripcion {
+  width: calc(100% - 3rem);
+  max-width: 1240px;
+  margin: 3rem auto 0;
+}
+.descripcion-cabecera {
+  max-width: 90rem;
+  margin-bottom: 2rem;
 }
 
-.hero-boton:hover {
-  background-color: #E0883A;
+.descripcion-titulo {
+  margin-top: 80px;
+  color: #1e1210;
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.descripcion-texto {
+  margin: 0;
+  color: #7e4b4c;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
+.descripcion .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
 }
 
-.hero-boton:focus-visible {
-  outline: 3px solid #F9E6D5;
-  outline-offset: 3px;
+.descripcion .col {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
+.descripcion .card {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 13fr);
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  min-height: 14rem;
+  overflow: hidden;
+  background-color: #1e1210;
+  border: 1px solid #7e4b4c;
+  border-radius: 12px;
+}
+
+.descripcion .card-img-top {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F2F4;
+  border: none;
+  border-right: 1px solid #D9DCE1;
+  border-radius: 0;
+  color: #6C757D;
+  object-fit: cover;
+}
+
+.descripcion .card-body {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.descripcion .card-title {
+  margin: 0 0 0.5rem;
+  color: #be8a84;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.descripcion .card-text {
+  margin: 0;
+  color: #C9D0DA;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .descripcion .row {
+    grid-template-columns: 1fr;
+  }
+
+  .descripcion .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .descripcion .card-img-top {
+    grid-column: 1;
+    grid-row: 1;
+    height: 12rem;
+    border-right: none;
+    border-bottom: 1px solid #D9DCE1;
+  }
+
+  .descripcion .card-body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+}
 .destacados {
   width: calc(100% - 3rem);
   max-width: 1240px;
   margin: 3rem auto;
   padding: 2.5rem 3rem 3rem;
-  background: linear-gradient(to bottom, #6c2c2d 0, #6c2c2d 15rem, #F5ECDE 15rem, #F5ECDE 100%);
+  background: linear-gradient(to bottom, #be8a84 0, #ede0de 15rem, #ede0de 15rem, #ede0de 100%);
   border-radius: 12px;
 }
 
@@ -95,7 +181,7 @@
 
 .destacados-titulo {
   margin: 0;
-  color: #FFFFFF;
+  color: #1e1210;
   font-size: clamp(1.7rem, 3.5vw, 2.5rem);
   font-weight: 700;
 }
@@ -105,7 +191,7 @@
   width: 120px;
   height: 24px;
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #7e4b4c;
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;

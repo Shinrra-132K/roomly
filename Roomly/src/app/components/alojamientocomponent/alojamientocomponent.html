@@ -116,7 +116,9 @@
           <img
             [src]="alojamiento.imagen"
             [alt]="alojamiento.nombre"
-            class="alojamiento-imagen">
+            class="alojamiento-imagen"
+            loading="lazy"
+            decoding="async">
 
           <span class="tipo">
             {{ alojamiento.tipo }}

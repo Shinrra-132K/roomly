@@ -1388,3 +1388,6 @@ input:focus-visible {
     grid-row: auto;
   }
 }
+.panel-info .datos-rapidos {
+  margin-top: 22px;
+}

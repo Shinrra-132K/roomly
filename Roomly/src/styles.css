@@ -3,6 +3,7 @@ app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #e8e5e3;
 }
 
 main {
@@ -15,12 +16,6 @@ html {
 @font-face {
   font-family: "bakery simple";
   src: url("/assets/fonts/Bakery.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "slither";
-  src: url("/assets/fonts/Slither.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
