@@ -1,5 +1,3 @@
-/* Posición del slider/carrusel. Al ser un número registrado, el navegador puede animarlo
-   y todo lo que depende de él (posiciones, puntos, nombres) se mueve solo, sin TypeScript. */
 @property --act {
   syntax: '<number>';
   inherits: true;
@@ -57,7 +55,6 @@
   stroke-linejoin: round;
 }
 
-/* Radios que controlan los sliders (no se ven, pero se pueden usar con el teclado) */
 .control {
   position: absolute;
   width: 1px;
@@ -73,7 +70,6 @@ input:focus-visible {
   outline-offset: 2px;
 }
 
-/* ---------- Navegación ---------- */
 .detalle-nav {
   padding-top: 110px;
   margin-bottom: 22px;
@@ -107,7 +103,6 @@ input:focus-visible {
   transform: translateX(-4px);
 }
 
-/* ---------- Estructura de filas ---------- */
 .fila {
   position: relative;
   display: grid;
@@ -153,7 +148,6 @@ input:focus-visible {
   line-height: 1.6;
 }
 
-/* ================= CARRUSEL DE FOTOS ================= */
 .carrusel {
   --act: 0;
 
@@ -163,7 +157,6 @@ input:focus-visible {
   background-color: #e8ded1;
   border-radius: 28px;
   box-shadow: 0 24px 55px #342b2733;
-  /* Autoplay: pasa a la siguiente foto cada 6 s */
   animation: auto-foto calc(var(--n) * 6s) steps(var(--n), end) infinite;
 }
 
@@ -172,13 +165,11 @@ input:focus-visible {
   to { --act: var(--n); }
 }
 
-/* Al pasar el mouse se pausa */
 .carrusel:hover,
 .carrusel:hover .carrusel-progreso {
   animation-play-state: paused;
 }
 
-/* Si la persona elige una foto con los puntos, se queda en esa foto */
 #foto1:checked ~ .carrusel { --act: 0; animation: none; }
 #foto2:checked ~ .carrusel { --act: 1; animation: none; }
 #foto3:checked ~ .carrusel { --act: 2; animation: none; }
@@ -225,7 +216,6 @@ input:focus-visible {
   pointer-events: none;
 }
 
-/* Entrada: el título sube con un pequeño escalonado */
 .carrusel-titulo > * {
   animation: subir 0.9s var(--curva) backwards;
 }
@@ -280,7 +270,6 @@ input:focus-visible {
   font-size: 15px;
 }
 
-/* Puntos: el activo se alarga */
 .carrusel-puntos {
   position: absolute;
   z-index: 2;
@@ -307,7 +296,6 @@ input:focus-visible {
   opacity: 1;
 }
 
-/* Barra de progreso del autoplay */
 .carrusel-progreso {
   position: absolute;
   z-index: 2;
@@ -329,7 +317,6 @@ input:focus-visible {
   display: none;
 }
 
-/* ================= SERVICIOS ================= */
 .panel-servicios {
   display: flex;
   flex-direction: column;
@@ -376,12 +363,10 @@ input:focus-visible {
   font-size: 11px;
 }
 
-/* Slider de servicios */
 .servicios-visor {
   --act: 0;
 
   position: relative;
-  /* Ocupa todo el espacio que queda bajo el título y centra el slider */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -390,7 +375,6 @@ input:focus-visible {
   padding: 26px 0;
   overflow: hidden;
   background: linear-gradient(135deg, #7d3435 0%, var(--vino) 45%, var(--vino-oscuro) 100%);
-  /* Autoplay: cambia de servicio cada 3 s */
   animation: auto-serv calc(var(--n) * 3s) steps(var(--n), end) infinite;
 }
 
@@ -426,7 +410,6 @@ input:focus-visible {
   outline-offset: -3px;
 }
 
-/* Puntos: marcan qué servicio está al centro */
 .serv-puntos {
   position: relative;
   z-index: 1;
@@ -454,8 +437,6 @@ input:focus-visible {
   opacity: 1;
 }
 
-/* Cada servicio calcula su distancia (--d) al servicio del centro (--act).
-   El anillo es circular: al llegar al final, vuelve al primero sin saltos. */
 .serv-slider {
   position: relative;
   flex: 0 0 auto;
@@ -508,7 +489,6 @@ input:focus-visible {
   stroke-width: 1.6;
 }
 
-/* Aro dorado del servicio activo, con un latido suave */
 .serv-circulo::after {
   content: "";
   position: absolute;
@@ -534,7 +514,6 @@ input:focus-visible {
   transition: opacity 0.6s;
 }
 
-/* ================= INFORMACIÓN ================= */
 .texto {
   max-width: 66ch;
   margin: 0 0 6px;
@@ -602,7 +581,6 @@ input:focus-visible {
   transform: translateY(-2px);
 }
 
-/* ================= COSTO ================= */
 .panel-costo {
   padding: 0;
   overflow: hidden;
@@ -617,7 +595,6 @@ input:focus-visible {
   color: #fff;
 }
 
-/* Brillo que cruza la cabecera cada tanto */
 .costo-cabecera::after {
   content: "";
   position: absolute;
@@ -822,7 +799,6 @@ input:focus-visible {
   font-weight: normal;
 }
 
-/* ================= RESERVA ================= */
 .reserva-botones {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -843,7 +819,6 @@ input:focus-visible {
   transition: background-color 0.25s, color 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
 }
 
-/* Destello al pasar el mouse */
 .boton::after {
   content: "";
   position: absolute;
@@ -935,7 +910,6 @@ input:focus-visible {
   font-size: 12px;
 }
 
-/* ================= RESEÑAS ================= */
 .resenas-cabecera {
   display: flex;
   align-items: center;
@@ -1048,7 +1022,6 @@ input:focus-visible {
   text-align: center;
 }
 
-/* ================= SIMILARES ================= */
 .similares {
   margin-top: 64px;
 }
@@ -1212,7 +1185,6 @@ input:focus-visible {
   background-color: var(--cobre);
 }
 
-/* ================= APARICIÓN AL HACER SCROLL ================= */
 @supports (animation-timeline: view()) {
   .fila > .panel,
   .similares-cabecera,
@@ -1230,7 +1202,6 @@ input:focus-visible {
   }
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 1000px) {
   .fila {
     grid-template-columns: 1fr;
@@ -1298,7 +1269,6 @@ input:focus-visible {
   }
 }
 
-/* Para quien prefiere menos movimiento: sin autoplay ni animaciones decorativas */
 @media (prefers-reduced-motion: reduce) {
   .carrusel,
   .servicios-visor,
@@ -1328,7 +1298,6 @@ input:focus-visible {
   }
 }
 
-/* ================= AJUSTES: reserva junto a los detalles y reseñas en horizontal ================= */
 .fila-detalle {
   grid-template-rows: auto 1fr;
 }

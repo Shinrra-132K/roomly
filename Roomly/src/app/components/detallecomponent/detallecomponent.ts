@@ -1,6 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Alojamiento, AlojamientoService, Resena } from '../../services/alojamiento.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import {
+  Alojamiento,
+  AlojamientoService,
+  Resena
+} from '../../services/alojamiento.service';
 
 @Component({
   selector: 'app-detallecomponent',
@@ -9,6 +15,7 @@ import { Alojamiento, AlojamientoService, Resena } from '../../services/alojamie
   templateUrl: './detallecomponent.html',
 })
 export class Detallecomponent implements OnInit {
+
   alojamiento?: Alojamiento;
   resenas: Resena[] = [];
   similares: Alojamiento[] = [];
@@ -27,7 +34,8 @@ export class Detallecomponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private alojamientoService: AlojamientoService
+    private alojamientoService: AlojamientoService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -47,16 +55,25 @@ export class Detallecomponent implements OnInit {
         const seleccionado = activos.find((a) => a.id === id);
 
         this.alojamiento = seleccionado;
-        this.resenas = (datos.resenas ?? []).filter((r) => r.alojamientoId === id);
+
+        this.resenas = (datos.resenas ?? [])
+          .filter((r) => r.alojamientoId === id);
 
         if (seleccionado) {
-          this.fotos = seleccionado.imagenes && seleccionado.imagenes.length > 0
-            ? seleccionado.imagenes
-            : [seleccionado.imagen];
+          this.fotos =
+            seleccionado.imagenes &&
+            seleccionado.imagenes.length > 0
+              ? seleccionado.imagenes
+              : [seleccionado.imagen];
+
           this.servicios = seleccionado.servicios ?? [];
-          this.serviciosAnillo = [...this.servicios, ...this.servicios];
+          this.serviciosAnillo = [
+            ...this.servicios,
+            ...this.servicios
+          ];
 
           const otros = activos.filter((a) => a.id !== id);
+
           this.similares = [
             ...otros.filter((a) => a.tipo === seleccionado.tipo),
             ...otros.filter((a) => a.tipo !== seleccionado.tipo)
@@ -69,6 +86,7 @@ export class Detallecomponent implements OnInit {
 
         this.cargando = false;
       },
+
       error: () => {
         this.errorCarga = true;
         this.cargando = false;
@@ -89,13 +107,16 @@ export class Detallecomponent implements OnInit {
   }
 
   get total(): number {
-    return this.subtotal + this.tarifaLimpieza + this.tarifaServicio;
+    return this.subtotal +
+      this.tarifaLimpieza +
+      this.tarifaServicio;
   }
 
   get errorFecha(): string {
     if (this.llegada && this.llegada < this.hoy) {
       return 'La fecha de llegada no puede ser anterior a hoy.';
     }
+
     return '';
   }
 
@@ -103,12 +124,81 @@ export class Detallecomponent implements OnInit {
     if (!this.llegada || this.errorFecha) {
       return '';
     }
-    const [anio, mes, dia] = this.llegada.split('-').map(Number);
-    const salida = new Date(anio, mes - 1, dia + this.noches);
+
+    const [anio, mes, dia] = this.llegada
+      .split('-')
+      .map(Number);
+
+    const salida = new Date(
+      anio,
+      mes - 1,
+      dia + this.noches
+    );
+
     return salida.toLocaleDateString('es-CO', {
       day: 'numeric',
       month: 'short',
       year: 'numeric'
+    });
+  }
+
+  get fechaSalidaISO(): string {
+    if (!this.llegada || this.errorFecha) {
+      return '';
+    }
+
+    const [anio, mes, dia] = this.llegada
+      .split('-')
+      .map(Number);
+
+    const salida = new Date(
+      anio,
+      mes - 1,
+      dia + this.noches
+    );
+
+    const mesSalida = String(
+      salida.getMonth() + 1
+    ).padStart(2, '0');
+
+    const diaSalida = String(
+      salida.getDate()
+    ).padStart(2, '0');
+
+    return `${salida.getFullYear()}-${mesSalida}-${diaSalida}`;
+  }
+
+  irAReserva(): void {
+    if (!this.alojamiento) {
+      return;
+    }
+
+    if (!this.llegada || this.errorFecha) {
+      alert('Selecciona una fecha de llegada válida.');
+      return;
+    }
+
+    if (
+      this.noches < 1 ||
+      this.numHuespedes < 1 ||
+      this.numHuespedes > this.alojamiento.huespedes
+    ) {
+      alert('Verifica las noches y el número de huéspedes.');
+      return;
+    }
+
+    this.router.navigate(['/reserva'], {
+      queryParams: {
+        alojamientoId: this.alojamiento.id,
+        alojamiento: this.alojamiento.nombre,
+        ciudad: this.alojamiento.ciudad,
+        imagen: this.alojamiento.imagen,
+        llegada: this.llegada,
+        salida: this.fechaSalidaISO,
+        noches: this.noches,
+        huespedes: this.numHuespedes,
+        total: this.total
+      }
     });
   }
 
@@ -118,7 +208,11 @@ export class Detallecomponent implements OnInit {
 
   cambiarHuespedes(cambio: number): void {
     const maximo = this.alojamiento?.huespedes ?? 1;
-    this.numHuespedes = Math.min(maximo, Math.max(1, this.numHuespedes + cambio));
+
+    this.numHuespedes = Math.min(
+      maximo,
+      Math.max(1, this.numHuespedes + cambio)
+    );
   }
 
   formatearPrecio(precio: number): string {
@@ -162,12 +256,19 @@ export class Detallecomponent implements OnInit {
     if (n.includes('parqueadero')) return 'parqueadero';
     if (n.includes('bbq') || n.includes('chimenea')) return 'fuego';
     if (n.includes('gimnasio')) return 'gimnasio';
+
     return 'otro';
   }
 
   private fechaLocal(fecha: Date): string {
-    const mes = String(fecha.getMonth() + 1).padStart(2, '0');
-    const dia = String(fecha.getDate()).padStart(2, '0');
+    const mes = String(
+      fecha.getMonth() + 1
+    ).padStart(2, '0');
+
+    const dia = String(
+      fecha.getDate()
+    ).padStart(2, '0');
+
     return `${fecha.getFullYear()}-${mes}-${dia}`;
   }
 }

@@ -1,0 +1,245 @@
+
+<main class="reservas-pagina">
+  <section class="reservas-contenedor">
+
+    <header class="reservas-encabezado">
+      <span class="reservas-etiqueta">
+        ROOMLY · TU HISTORIAL
+      </span>
+
+      <h1>Mis reservas</h1>
+
+      <p>
+        Consulta los detalles de las reservas registradas
+        desde este navegador.
+      </p>
+
+      <div class="reservas-encabezado-pie">
+        <span class="reservas-contador">
+          {{ reservas.length }}
+          {{ reservas.length === 1
+          ? 'reserva registrada'
+          : 'reservas registradas' }}
+        </span>
+
+        <button
+          type="button"
+          class="reservas-recargar"
+          (click)="cargarReservas()">
+          ↻ Actualizar
+        </button>
+      </div>
+    </header>
+
+    <div
+      class="reservas-mensaje reservas-mensaje-error"
+      role="alert"
+      *ngIf="error">
+      {{ error }}
+    </div>
+
+    <div
+      class="reservas-cargando"
+      *ngIf="cargando">
+      Cargando reservas...
+    </div>
+
+    <section
+      class="reservas-vacio"
+      *ngIf="
+        !cargando &&
+        !error &&
+        reservas.length === 0
+      ">
+
+      <div class="reservas-vacio-icono">⌂</div>
+
+      <h2>Aún no tienes reservas</h2>
+
+      <p>
+        Cuando confirmes una reserva, aparecerá aquí
+        con todos sus detalles.
+      </p>
+
+      <a
+        routerLink="/alojamientos"
+        class="reservas-boton-principal">
+        Explorar alojamientos
+        <span>→</span>
+      </a>
+    </section>
+
+    <section
+      class="reservas-lista"
+      *ngIf="!cargando && reservas.length > 0">
+
+      <article
+        class="reserva-tarjeta"
+        *ngFor="
+          let reserva of reservas;
+          trackBy: trackByReserva
+        ">
+
+        <div class="reserva-tarjeta-cabecera">
+          <div>
+            <span class="reserva-id-etiqueta">
+              IDENTIFICADOR DE RESERVA
+            </span>
+
+            <h2 class="reserva-id">
+              {{ reserva.id || 'Sin identificador' }}
+            </h2>
+          </div>
+
+          <span
+            class="reserva-estado"
+            [ngClass]="estadoClase(reserva.estado)">
+            {{ reserva.estado || 'Sin estado' }}
+          </span>
+        </div>
+
+        <div class="reserva-alojamiento">
+          <img
+            *ngIf="reserva.imagen"
+            class="reserva-imagen"
+            [src]="reserva.imagen"
+            [alt]="
+              reserva.alojamiento ||
+              'Imagen del alojamiento'
+            ">
+
+          <div class="reserva-alojamiento-datos">
+            <span class="reserva-seccion-etiqueta">
+              ALOJAMIENTO
+            </span>
+
+            <h3>
+              {{
+                reserva.alojamiento ||
+                'Alojamiento sin nombre'
+              }}
+            </h3>
+
+            <p>
+              {{
+                reserva.ciudad ||
+                'Ubicación no disponible'
+              }}
+            </p>
+
+            <small *ngIf="reserva.alojamientoId">
+              Código del alojamiento:
+              {{ reserva.alojamientoId }}
+            </small>
+          </div>
+        </div>
+
+        <div class="reserva-detalles-grid">
+
+          <div class="reserva-detalle">
+            <span class="reserva-detalle-etiqueta">
+              Fecha de llegada
+            </span>
+
+            <strong>
+              {{ formatearFecha(reserva.fechaLlegada) }}
+            </strong>
+          </div>
+
+          <div class="reserva-detalle">
+            <span class="reserva-detalle-etiqueta">
+              Fecha de salida
+            </span>
+
+            <strong>
+              {{ formatearFecha(reserva.fechaSalida) }}
+            </strong>
+          </div>
+
+          <div class="reserva-detalle">
+            <span class="reserva-detalle-etiqueta">
+              Huéspedes
+            </span>
+
+            <strong>
+              {{ reserva.huespedes }}
+              {{
+                reserva.huespedes === 1
+                  ? 'persona'
+                  : 'personas'
+              }}
+            </strong>
+          </div>
+
+          <div class="reserva-detalle">
+            <span class="reserva-detalle-etiqueta">
+              Duración
+            </span>
+
+            <strong>
+              {{ reserva.noches }}
+              {{
+                reserva.noches === 1
+                  ? 'noche'
+                  : 'noches'
+              }}
+            </strong>
+          </div>
+
+        </div>
+
+        <div class="reserva-titular">
+          <span class="reserva-seccion-etiqueta">
+            DATOS DEL TITULAR
+          </span>
+
+          <div class="reserva-titular-datos">
+
+            <div class="reserva-detalle">
+              <span class="reserva-detalle-etiqueta">
+                Nombre completo
+              </span>
+
+              <strong>
+                {{ reserva.titular || 'No disponible' }}
+              </strong>
+            </div>
+
+            <div class="reserva-detalle">
+              <span class="reserva-detalle-etiqueta">
+                Correo electrónico
+              </span>
+
+              <strong class="reserva-correo">
+                {{ reserva.correo || 'No disponible' }}
+              </strong>
+            </div>
+
+          </div>
+        </div>
+
+        <footer class="reserva-tarjeta-pie">
+          <div>
+            <span class="reserva-total-etiqueta">
+              VALOR TOTAL
+            </span>
+
+            <strong class="reserva-total">
+              {{ formatearPrecio(reserva.total) }}
+            </strong>
+          </div>
+
+          <span class="reserva-local">
+          </span>
+        </footer>
+
+      </article>
+    </section>
+
+    <p
+      class="reservas-nota"
+      *ngIf="!cargando && reservas.length > 0">
+    </p>
+
+  </section>
+</main>

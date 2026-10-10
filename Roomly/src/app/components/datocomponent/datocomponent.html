@@ -1,0 +1,206 @@
+
+<main class="datos-pagina">
+  <section class="datos-contenedor">
+
+    <a
+      class="datos-volver"
+      [routerLink]="['/detalle', alojamientoId]">
+      ← Volver al alojamiento
+    </a>
+
+    <header class="datos-encabezado">
+      <span class="datos-etiqueta">ROOMLY · RESERVAS</span>
+      <h1>Datos del titular</h1>
+      <p>
+        Completa tus datos para registrar la reserva de tu estancia.
+      </p>
+    </header>
+
+    <div class="datos-grid" *ngIf="datosValidos">
+
+      <section class="datos-formulario">
+
+        <div class="datos-paso">
+          <span class="datos-numero">01</span>
+
+          <div>
+            <h2>Información personal</h2>
+            <p>¿A nombre de quién quedará la reserva?</p>
+          </div>
+        </div>
+
+        <form
+          #formulario="ngForm"
+          (ngSubmit)="guardarReserva()">
+
+          <div class="datos-campo">
+            <label for="titular">
+              Nombre completo del titular
+            </label>
+
+            <input
+              id="titular"
+              type="text"
+              name="titular"
+              [(ngModel)]="titular"
+              #campoTitular="ngModel"
+              placeholder="Ej. María Fernanda López"
+              minlength="3"
+              maxlength="100"
+              autocomplete="name"
+              required>
+
+            <small
+              class="datos-error"
+              *ngIf="campoTitular.invalid &&
+              (campoTitular.dirty || campoTitular.touched)">
+              Ingresa el nombre del titular, con al menos 3 caracteres.
+            </small>
+          </div>
+
+          <div class="datos-campo">
+            <label for="correo">
+              Correo electrónico
+            </label>
+
+            <input
+              id="correo"
+              type="email"
+              name="correo"
+              [(ngModel)]="correo"
+              #campoCorreo="ngModel"
+              placeholder="ejemplo@correo.com"
+              maxlength="254"
+              autocomplete="email"
+              required
+              email>
+
+            <small
+              class="datos-error"
+              *ngIf="campoCorreo.invalid &&
+              (campoCorreo.dirty || campoCorreo.touched)">
+              Ingresa un correo electrónico válido.
+            </small>
+          </div>
+
+          <div class="datos-nota">
+            <span class="datos-nota-icono">i</span>
+
+            <p>
+              Tus datos se utilizarán para registrar esta reserva
+              en este navegador. No se enviarán a un servidor.
+            </p>
+          </div>
+
+          <div
+            class="datos-alerta"
+            role="alert"
+            *ngIf="error">
+
+            {{ error }}
+
+            <a
+              *ngIf="!datosValidos"
+              routerLink="/alojamientos">
+              Consultar alojamientos
+            </a>
+          </div>
+
+          <div
+            class="datos-exito"
+            role="status"
+            *ngIf="mensajeExito">
+            {{ mensajeExito }}
+          </div>
+
+          <button
+            type="submit"
+            class="datos-boton"
+            [disabled]="formulario.invalid || reservaGuardada">
+
+            {{ reservaGuardada
+            ? 'Reserva confirmada'
+            : 'Confirmar reserva' }}
+
+            <span>→</span>
+          </button>
+
+        </form>
+      </section>
+
+      <aside class="datos-resumen">
+
+        <div class="datos-resumen-imagen">
+          <img
+            *ngIf="imagen"
+            [src]="imagen"
+            [alt]="alojamiento">
+
+          <span class="datos-imagen-etiqueta">
+            Tu próxima estancia
+          </span>
+        </div>
+
+        <div class="datos-resumen-contenido">
+
+          <span class="datos-resumen-ciudad">
+            {{ ciudad }}
+          </span>
+
+          <h2>{{ alojamiento }}</h2>
+
+          <div class="datos-separador"></div>
+
+          <div class="datos-resumen-fila">
+            <span>Fecha de llegada</span>
+            <strong>{{ fechaLlegada }}</strong>
+          </div>
+
+          <div class="datos-resumen-fila">
+            <span>Fecha de salida</span>
+            <strong>{{ fechaSalida }}</strong>
+          </div>
+
+          <div class="datos-resumen-fila">
+            <span>Duración</span>
+            <strong>
+              {{ noches }}
+              {{ noches === 1 ? 'noche' : 'noches' }}
+            </strong>
+          </div>
+
+          <div class="datos-resumen-fila">
+            <span>Huéspedes</span>
+            <strong>{{ huespedes }}</strong>
+          </div>
+
+          <div class="datos-separador"></div>
+
+          <div class="datos-total">
+            <span>Total de la reserva</span>
+            <strong>{{ formatearPrecio(total) }}</strong>
+          </div>
+
+          <p class="datos-resumen-nota">
+            El valor corresponde a la cotización calculada en el detalle.
+          </p>
+
+        </div>
+      </aside>
+
+    </div>
+
+    <div
+      class="datos-alerta"
+      role="alert"
+      *ngIf="!datosValidos">
+
+      {{ error }}
+
+      <a routerLink="/alojamientos">
+        Consultar alojamientos
+      </a>
+    </div>
+
+  </section>
+</main>
