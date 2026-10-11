@@ -14,7 +14,7 @@ html {
 }
 
 @font-face {
-  font-family: "bakery simple";
+  font-family: "bakery";
   src: url("/assets/fonts/Bakery.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;

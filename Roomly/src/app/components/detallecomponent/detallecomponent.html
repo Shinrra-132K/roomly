@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <div class="col-lg-5 align-self-start">
+        <div class="col-lg-5 align-self-start d-flex flex-column gap-4">
           <aside class="card panel-servicios text-white">
             <div class="card-body p-4">
               <h2 class="h4 mb-1">Servicios del lugar</h2>
@@ -135,6 +135,33 @@
               </div>
             </div>
           </aside>
+
+          <div class="card panel-servicios datos-tira text-white">
+            <div class="card-body px-3 py-4">
+              <div class="card-title">
+                Básicos de este alojamiento
+
+              </div>
+              <div class="row row-cols-4 g-0 text-center datos-rapidos">
+                <div class="col">
+                  <strong class="d-block fs-3">{{ alojamiento.huespedes }}</strong>
+                  <small class="opacity-75">Huéspedes</small>
+                </div>
+                <div class="col border-start">
+                  <strong class="d-block fs-3">{{ alojamiento.habitaciones ?? '—' }}</strong>
+                  <small class="opacity-75">Habitaciones</small>
+                </div>
+                <div class="col border-start">
+                  <strong class="d-block fs-3">{{ alojamiento.camas ?? '—' }}</strong>
+                  <small class="opacity-75">Camas</small>
+                </div>
+                <div class="col border-start">
+                  <strong class="d-block fs-3">{{ alojamiento.banos ?? '—' }}</strong>
+                  <small class="opacity-75">Baños</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -147,26 +174,7 @@
               <h2 class="h4">Sobre este alojamiento</h2>
               <p class="texto">{{ alojamiento.descripcion }}</p>
 
-              <div class="row row-cols-4 g-0 text-center py-3 my-3 border-top border-bottom datos-rapidos">
-                <div class="col">
-                  <strong class="d-block fs-3">{{ alojamiento.huespedes }}</strong>
-                  <small class="text-body-secondary">Huéspedes</small>
-                </div>
-                <div class="col border-start">
-                  <strong class="d-block fs-3">{{ alojamiento.habitaciones ?? '—' }}</strong>
-                  <small class="text-body-secondary">Habitaciones</small>
-                </div>
-                <div class="col border-start">
-                  <strong class="d-block fs-3">{{ alojamiento.camas ?? '—' }}</strong>
-                  <small class="text-body-secondary">Camas</small>
-                </div>
-                <div class="col border-start">
-                  <strong class="d-block fs-3">{{ alojamiento.banos ?? '—' }}</strong>
-                  <small class="text-body-secondary">Baños</small>
-                </div>
-              </div>
-
-              <div class="row row-cols-1 row-cols-md-2 gx-5 small">
+              <div class="row row-cols-1 row-cols-md-2 gx-5 small mt-4">
                 <div class="col d-flex justify-content-between border-top py-2">
                   <span class="text-body-secondary">Tipo de alojamiento</span>
                   <strong>{{ alojamiento.tipo }}</strong>
