@@ -41,7 +41,6 @@ export interface DatosAlojamientos {
   providedIn: 'root'
 })
 export class AlojamientoService {
-
   private url = 'assets/alojamientos.json';
 
   private datos$?: Observable<DatosAlojamientos>;
@@ -54,6 +53,7 @@ export class AlojamientoService {
         .get<DatosAlojamientos>(this.url)
         .pipe(shareReplay(1));
     }
+
     return this.datos$;
   }
 }

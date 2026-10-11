@@ -1,3 +1,4 @@
+
 {
   "alojamientos": [
     {
@@ -7,7 +8,7 @@
       "departamento": "Antioquia",
       "tipo": "Cabaña",
       "huespedes": 4,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector turístico del embalse, Guatapé",
       "habitaciones": 2,
       "camas": 3,
       "banos": 2,
@@ -15,6 +16,13 @@
       "imagen": "assets/guatape.jpeg",
       "descripcion": "Disfruta de una cabaña acogedora con una hermosa vista al embalse de Guatapé.",
       "servicios": ["WiFi", "Cocina", "Parqueadero"],
+      "reglas": [
+        "No fumar dentro de la cabaña",
+        "No realizar fiestas ni eventos",
+        "Respetar el horario de descanso",
+        "Cuidar el mobiliario y las instalaciones",
+        "No dejar basura en las zonas exteriores"
+      ],
       "calificacion": 4.9,
       "tarifaLimpieza": 45000,
       "activo": true
@@ -26,7 +34,7 @@
       "departamento": "Antioquia",
       "tipo": "Casa campestre",
       "huespedes": 6,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Vía hacia la Piedra del Peñol, Guatapé",
       "habitaciones": 4,
       "camas": 5,
       "banos": 3,
@@ -34,6 +42,13 @@
       "imagen": "assets/casa.jpeg",
       "descripcion": "Una casa ideal para descansar en familia y conocer los paisajes de Guatapé.",
       "servicios": ["Piscina", "WiFi", "Zona BBQ"],
+      "reglas": [
+        "No fumar dentro de la casa",
+        "No superar la capacidad máxima de 6 huéspedes",
+        "Supervisar a los menores en la piscina",
+        "No realizar fiestas sin autorización",
+        "Dejar la cocina limpia después de usarla"
+      ],
       "calificacion": 4.8,
       "tarifaLimpieza": 48000,
       "activo": true
@@ -45,7 +60,7 @@
       "departamento": "Antioquia",
       "tipo": "Apartamento",
       "huespedes": 3,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector El Poblado, Medellín, Antioquia",
       "habitaciones": 2,
       "camas": 3,
       "banos": 1,
@@ -53,6 +68,13 @@
       "imagen": "assets/poblado.jpeg",
       "descripcion": "Apartamento moderno, cerca de restaurantes, comercios y lugares turísticos.",
       "servicios": ["WiFi", "Cocina", "TV"],
+      "reglas": [
+        "Prohibido fumar dentro del apartamento",
+        "No se permiten fiestas ni reuniones ruidosas",
+        "Respetar las normas de convivencia del edificio",
+        "No ingresar más huéspedes de los permitidos",
+        "Apagar los electrodomésticos al salir"
+      ],
       "calificacion": 4.7,
       "tarifaLimpieza": 20000,
       "activo": true
@@ -64,7 +86,7 @@
       "departamento": "Cundinamarca",
       "tipo": "Apartamento",
       "huespedes": 2,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector Chapinero, Bogotá",
       "habitaciones": 1,
       "camas": 1,
       "banos": 1,
@@ -72,6 +94,13 @@
       "imagen": "assets/bogota.jpeg",
       "descripcion": "Alojamiento cómodo para descubrir la capital de Colombia.",
       "servicios": ["WiFi", "TV", "Cocina"],
+      "reglas": [
+        "No fumar dentro del apartamento",
+        "No se permiten fiestas",
+        "Mantener bajo el volumen de la música",
+        "Respetar las zonas comunes del edificio",
+        "No se permiten mascotas"
+      ],
       "calificacion": 4.6,
       "tarifaLimpieza": 34000,
       "activo": true
@@ -83,7 +112,7 @@
       "departamento": "Bolívar",
       "tipo": "Casa",
       "huespedes": 5,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector turístico de Bocagrande, Cartagena",
       "habitaciones": 2,
       "camas": 4,
       "banos": 2,
@@ -91,6 +120,13 @@
       "imagen": "assets/vistaalmar.jpeg",
       "descripcion": "Descansa cerca de las playas y disfruta del Caribe colombiano.",
       "servicios": ["Piscina", "WiFi", "Aire acondicionado"],
+      "reglas": [
+        "No fumar dentro de la casa",
+        "No organizar fiestas sin autorización",
+        "Supervisar a los menores en la piscina",
+        "Apagar el aire acondicionado al salir",
+        "Mantener limpias las zonas comunes"
+      ],
       "calificacion": 4.9,
       "tarifaLimpieza": 38000,
       "activo": true
@@ -102,7 +138,7 @@
       "departamento": "Magdalena",
       "tipo": "Cabaña",
       "huespedes": 4,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector de Taganga, Santa Marta",
       "habitaciones": 3,
       "camas": 3,
       "banos": 1,
@@ -110,6 +146,13 @@
       "imagen": "assets/tropical.jpeg",
       "descripcion": "Un espacio tranquilo para disfrutar de la naturaleza y el mar.",
       "servicios": ["Jardín", "WiFi", "Cocina"],
+      "reglas": [
+        "No fumar dentro de la cabaña",
+        "No hacer fogatas fuera de las zonas autorizadas",
+        "No arrojar basura al jardín",
+        "Respetar el horario de descanso",
+        "Cerrar puertas y ventanas al salir"
+      ],
       "calificacion": 4.8,
       "tarifaLimpieza": 47000,
       "activo": true
@@ -121,7 +164,7 @@
       "departamento": "Valle del Cauca",
       "tipo": "Apartamento",
       "huespedes": 3,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector San Antonio, Cali",
       "habitaciones": 2,
       "camas": 3,
       "banos": 1,
@@ -129,6 +172,13 @@
       "imagen": "assets/cali.jpeg",
       "descripcion": "Un alojamiento práctico para explorar la cultura y gastronomía caleña.",
       "servicios": ["WiFi", "TV", "Cocina"],
+      "reglas": [
+        "No fumar dentro del apartamento",
+        "No se permiten fiestas ni reuniones ruidosas",
+        "Mantener limpio el espacio",
+        "Respetar las normas del edificio",
+        "No dejar las luces encendidas innecesariamente"
+      ],
       "calificacion": 4.5,
       "tarifaLimpieza": 35000,
       "activo": true
@@ -140,7 +190,7 @@
       "departamento": "Boyacá",
       "tipo": "Casa colonial",
       "huespedes": 6,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Centro histórico, Villa de Leyva",
       "habitaciones": 5,
       "camas": 5,
       "banos": 3,
@@ -148,6 +198,13 @@
       "imagen": "assets/colonial.jpeg",
       "descripcion": "Una casa con encanto colonial para disfrutar de la historia y tranquilidad del pueblo.",
       "servicios": ["Patio", "Cocina", "WiFi"],
+      "reglas": [
+        "No fumar dentro de la casa",
+        "No realizar fiestas sin autorización",
+        "Cuidar los elementos y la decoración colonial",
+        "No hacer fogatas en el patio",
+        "Respetar el horario de descanso"
+      ],
       "calificacion": 4.8,
       "tarifaLimpieza": 40000,
       "activo": true
@@ -159,7 +216,7 @@
       "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
       "tipo": "Cabaña",
       "huespedes": 2,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Sector San Luis, San Andrés",
       "habitaciones": 1,
       "camas": 1,
       "banos": 1,
@@ -167,6 +224,13 @@
       "imagen": "assets/cabaña.jpeg",
       "descripcion": "Un lugar acogedor para disfrutar de las playas y el mar de los siete colores.",
       "servicios": ["Aire acondicionado", "WiFi", "Terraza"],
+      "reglas": [
+        "No fumar dentro de la cabaña",
+        "No arrojar basura al mar ni a la playa",
+        "Apagar el aire acondicionado al salir",
+        "No realizar fiestas",
+        "Respetar los horarios de descanso"
+      ],
       "calificacion": 4.7,
       "tarifaLimpieza": 40000,
       "activo": true
@@ -178,7 +242,7 @@
       "departamento": "Risaralda",
       "tipo": "Finca",
       "huespedes": 5,
-      "ubicacion": "aqui va la direccion",
+      "ubicacion": "Zona rural cafetera, Pereira",
       "habitaciones": 4,
       "camas": 4,
       "banos": 2,
@@ -186,9 +250,368 @@
       "imagen": "assets/finca.jpeg",
       "descripcion": "Vive una experiencia rodeada de montañas, naturaleza y cafetales.",
       "servicios": ["Jardín", "Parqueadero", "Cocina"],
+      "reglas": [
+        "No fumar dentro de la finca",
+        "No dejar residuos en los cultivos",
+        "No encender fogatas en zonas no autorizadas",
+        "Respetar los animales y las plantas",
+        "Mantener cerradas las puertas de acceso"
+      ],
       "calificacion": 4.9,
       "tarifaLimpieza": 45000,
       "activo": true
+    }
+  ],
+  "resenas": [
+    {
+      "id": 1,
+      "alojamientoId": 1,
+      "usuario": "Laura Gómez",
+      "calificacion": 5,
+      "comentario": "La vista al embalse es espectacular y la cabaña estaba muy limpia."
+    },
+    {
+      "id": 2,
+      "alojamientoId": 1,
+      "usuario": "Andrés Ramírez",
+      "calificacion": 5,
+      "comentario": "Un lugar tranquilo, cómodo y perfecto para descansar el fin de semana."
+    },
+    {
+      "id": 3,
+      "alojamientoId": 1,
+      "usuario": "Camila Torres",
+      "calificacion": 5,
+      "comentario": "La cocina tenía lo necesario y la atención fue excelente."
+    },
+    {
+      "id": 4,
+      "alojamientoId": 1,
+      "usuario": "Felipe Moreno",
+      "calificacion": 5,
+      "comentario": "Muy buena ubicación para disfrutar de Guatapé. Volvería sin dudarlo."
+    },
+    {
+      "id": 5,
+      "alojamientoId": 1,
+      "usuario": "Natalia Ríos",
+      "calificacion": 4,
+      "comentario": "La experiencia fue muy buena; sería ideal contar con más iluminación exterior."
+    },
+    {
+      "id": 6,
+      "alojamientoId": 2,
+      "usuario": "Andrea López",
+      "calificacion": 5,
+      "comentario": "La casa es amplia y la zona de piscina fue ideal para compartir en familia."
+    },
+    {
+      "id": 7,
+      "alojamientoId": 2,
+      "usuario": "Juan David Pérez",
+      "calificacion": 5,
+      "comentario": "Muy cerca de los sitios turísticos y con espacios cómodos."
+    },
+    {
+      "id": 8,
+      "alojamientoId": 2,
+      "usuario": "Mariana Castro",
+      "calificacion": 5,
+      "comentario": "Todo estaba organizado y pudimos descansar muy bien."
+    },
+    {
+      "id": 9,
+      "alojamientoId": 2,
+      "usuario": "Santiago Ruiz",
+      "calificacion": 4,
+      "comentario": "Nos gustó mucho la casa; recomendamos llevar lo necesario para cocinar."
+    },
+    {
+      "id": 10,
+      "alojamientoId": 2,
+      "usuario": "Paula Herrera",
+      "calificacion": 5,
+      "comentario": "Excelente opción para un viaje en grupo. La volveríamos a reservar."
+    },
+    {
+      "id": 11,
+      "alojamientoId": 3,
+      "usuario": "Miguel Torres",
+      "calificacion": 5,
+      "comentario": "Apartamento moderno, limpio y cerca de restaurantes y comercios."
+    },
+    {
+      "id": 12,
+      "alojamientoId": 3,
+      "usuario": "Valentina Gil",
+      "calificacion": 5,
+      "comentario": "La cocina y el WiFi funcionaron muy bien durante la estadía."
+    },
+    {
+      "id": 13,
+      "alojamientoId": 3,
+      "usuario": "Daniela Ortiz",
+      "calificacion": 4,
+      "comentario": "Muy cómodo y bien ubicado; en horas pico se escucha algo de ruido de la calle."
+    },
+    {
+      "id": 14,
+      "alojamientoId": 3,
+      "usuario": "Sebastián León",
+      "calificacion": 5,
+      "comentario": "El espacio estaba bien distribuido y fue fácil llegar."
+    },
+    {
+      "id": 15,
+      "alojamientoId": 3,
+      "usuario": "Juliana Vélez",
+      "calificacion": 4,
+      "comentario": "Buena experiencia para conocer Medellín, con todo lo básico disponible."
+    },
+    {
+      "id": 16,
+      "alojamientoId": 4,
+      "usuario": "Natalia Pérez",
+      "calificacion": 5,
+      "comentario": "El apartamento es cómodo y permite moverse fácilmente por la ciudad."
+    },
+    {
+      "id": 17,
+      "alojamientoId": 4,
+      "usuario": "Diego Martínez",
+      "calificacion": 4,
+      "comentario": "El espacio estaba limpio y tenía lo necesario para una estadía corta."
+    },
+    {
+      "id": 18,
+      "alojamientoId": 4,
+      "usuario": "Laura Sánchez",
+      "calificacion": 5,
+      "comentario": "Buena vista y una zona conveniente para salir a conocer Bogotá."
+    },
+    {
+      "id": 19,
+      "alojamientoId": 4,
+      "usuario": "Andrés Cárdenas",
+      "calificacion": 4,
+      "comentario": "Todo estuvo bien; el espacio es ideal para una o dos personas."
+    },
+    {
+      "id": 20,
+      "alojamientoId": 4,
+      "usuario": "María Fernanda Ruiz",
+      "calificacion": 5,
+      "comentario": "La comunicación fue clara y el alojamiento cumplió con lo esperado."
+    },
+    {
+      "id": 21,
+      "alojamientoId": 5,
+      "usuario": "Isabella Romero",
+      "calificacion": 5,
+      "comentario": "La cercanía al mar hizo que el viaje fuera muy especial."
+    },
+    {
+      "id": 22,
+      "alojamientoId": 5,
+      "usuario": "Carlos Mendoza",
+      "calificacion": 4,
+      "comentario": "La casa es agradable y la zona es práctica para disfrutar de la playa."
+    },
+    {
+      "id": 23,
+      "alojamientoId": 5,
+      "usuario": "Sofía Navarro",
+      "calificacion": 5,
+      "comentario": "Nos gustaron mucho los espacios y el aire acondicionado."
+    },
+    {
+      "id": 24,
+      "alojamientoId": 5,
+      "usuario": "Mateo Salazar",
+      "calificacion": 4,
+      "comentario": "Buena estadía; conviene planear con anticipación los desplazamientos."
+    },
+    {
+      "id": 25,
+      "alojamientoId": 5,
+      "usuario": "Valeria Acosta",
+      "calificacion": 5,
+      "comentario": "Excelente lugar para descansar y compartir unos días en Cartagena."
+    },
+    {
+      "id": 26,
+      "alojamientoId": 6,
+      "usuario": "Daniela Márquez",
+      "calificacion": 5,
+      "comentario": "La cabaña tiene un ambiente tranquilo y está rodeada de naturaleza."
+    },
+    {
+      "id": 27,
+      "alojamientoId": 6,
+      "usuario": "Nicolás Peña",
+      "calificacion": 5,
+      "comentario": "Disfrutamos mucho la calma del lugar y la distribución de los espacios."
+    },
+    {
+      "id": 28,
+      "alojamientoId": 6,
+      "usuario": "Sara Ospina",
+      "calificacion": 4,
+      "comentario": "Muy acogedora; sería útil tener más opciones de iluminación por la noche."
+    },
+    {
+      "id": 29,
+      "alojamientoId": 6,
+      "usuario": "Tomás Herrera",
+      "calificacion": 5,
+      "comentario": "Un buen sitio para desconectarse y descansar."
+    },
+    {
+      "id": 30,
+      "alojamientoId": 6,
+      "usuario": "Luisa Fernanda Díaz",
+      "calificacion": 5,
+      "comentario": "Todo estuvo muy bien y la cocina nos resultó bastante práctica."
+    },
+    {
+      "id": 31,
+      "alojamientoId": 7,
+      "usuario": "Gabriela Muñoz",
+      "calificacion": 5,
+      "comentario": "Un apartamento práctico y cómodo para recorrer Cali."
+    },
+    {
+      "id": 32,
+      "alojamientoId": 7,
+      "usuario": "Esteban López",
+      "calificacion": 4,
+      "comentario": "La ubicación nos sirvió para movernos por la ciudad y el lugar estaba limpio."
+    },
+    {
+      "id": 33,
+      "alojamientoId": 7,
+      "usuario": "María Camila Rojas",
+      "calificacion": 5,
+      "comentario": "Buena relación entre precio y comodidad."
+    },
+    {
+      "id": 34,
+      "alojamientoId": 7,
+      "usuario": "Jorge Valencia",
+      "calificacion": 4,
+      "comentario": "Tiene lo necesario para una estadía corta; el espacio es sencillo."
+    },
+    {
+      "id": 35,
+      "alojamientoId": 7,
+      "usuario": "Ana María Cruz",
+      "calificacion": 4,
+      "comentario": "La experiencia fue buena y las indicaciones de llegada fueron claras."
+    },
+    {
+      "id": 36,
+      "alojamientoId": 8,
+      "usuario": "Claudia Fuentes",
+      "calificacion": 5,
+      "comentario": "La arquitectura colonial y el patio hacen que la casa tenga mucho encanto."
+    },
+    {
+      "id": 37,
+      "alojamientoId": 8,
+      "usuario": "Ricardo Gómez",
+      "calificacion": 5,
+      "comentario": "Ideal para pasar unos días tranquilos con familia o amigos."
+    },
+    {
+      "id": 38,
+      "alojamientoId": 8,
+      "usuario": "Elena Pardo",
+      "calificacion": 5,
+      "comentario": "La casa es amplia y queda muy bien para conocer el centro histórico."
+    },
+    {
+      "id": 39,
+      "alojamientoId": 8,
+      "usuario": "Pablo Rincón",
+      "calificacion": 4,
+      "comentario": "Muy agradable; hay que tener cuidado con los elementos decorativos antiguos."
+    },
+    {
+      "id": 40,
+      "alojamientoId": 8,
+      "usuario": "Mónica Silva",
+      "calificacion": 5,
+      "comentario": "Un alojamiento con personalidad y espacios para compartir."
+    },
+    {
+      "id": 41,
+      "alojamientoId": 9,
+      "usuario": "Carolina Acosta",
+      "calificacion": 5,
+      "comentario": "La terraza y la cercanía al mar hicieron la estadía muy agradable."
+    },
+    {
+      "id": 42,
+      "alojamientoId": 9,
+      "usuario": "David Flórez",
+      "calificacion": 5,
+      "comentario": "Un lugar acogedor para disfrutar de San Andrés y descansar."
+    },
+    {
+      "id": 43,
+      "alojamientoId": 9,
+      "usuario": "Paola Jiménez",
+      "calificacion": 4,
+      "comentario": "Todo estuvo bien; recomendamos organizar con anticipación los traslados."
+    },
+    {
+      "id": 44,
+      "alojamientoId": 9,
+      "usuario": "Juan Camilo Díaz",
+      "calificacion": 5,
+      "comentario": "El aire acondicionado y el WiFi funcionaron correctamente."
+    },
+    {
+      "id": 45,
+      "alojamientoId": 9,
+      "usuario": "Lina Marcela Pérez",
+      "calificacion": 4,
+      "comentario": "Bonito alojamiento y buena experiencia en general."
+    },
+    {
+      "id": 46,
+      "alojamientoId": 10,
+      "usuario": "Felipe Restrepo",
+      "calificacion": 5,
+      "comentario": "Despertar rodeado de cafetales y montañas fue una experiencia excelente."
+    },
+    {
+      "id": 47,
+      "alojamientoId": 10,
+      "usuario": "Diana Morales",
+      "calificacion": 5,
+      "comentario": "La finca es tranquila y perfecta para descansar en contacto con la naturaleza."
+    },
+    {
+      "id": 48,
+      "alojamientoId": 10,
+      "usuario": "Óscar Bedoya",
+      "calificacion": 5,
+      "comentario": "Nos gustó el jardín y la sensación de privacidad."
+    },
+    {
+      "id": 49,
+      "alojamientoId": 10,
+      "usuario": "Alejandra Quintero",
+      "calificacion": 5,
+      "comentario": "Un espacio muy agradable para viajar en familia."
+    },
+    {
+      "id": 50,
+      "alojamientoId": 10,
+      "usuario": "Manuel Castaño",
+      "calificacion": 4,
+      "comentario": "Muy buena experiencia; conviene llevar vehículo para moverse con facilidad."
     }
   ]
 }

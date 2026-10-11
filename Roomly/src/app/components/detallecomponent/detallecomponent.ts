@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -15,7 +14,6 @@ import {
   templateUrl: './detallecomponent.html',
 })
 export class Detallecomponent implements OnInit {
-
   alojamiento?: Alojamiento;
   resenas: Resena[] = [];
   similares: Alojamiento[] = [];
@@ -55,9 +53,9 @@ export class Detallecomponent implements OnInit {
         const seleccionado = activos.find((a) => a.id === id);
 
         this.alojamiento = seleccionado;
-
-        this.resenas = (datos.resenas ?? [])
-          .filter((r) => r.alojamientoId === id);
+        this.resenas = (datos.resenas ?? []).filter(
+          (resena) => resena.alojamientoId === id
+        );
 
         if (seleccionado) {
           this.fotos =

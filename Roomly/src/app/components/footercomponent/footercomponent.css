@@ -98,27 +98,3 @@
   outline-offset: 3px;
 }
 
-@media (max-width: 800px) {
-  .footer-contenido {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
-  }
-
-  .footer-marca {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .footer-marca-lema {
-    max-width: none;
-  }
-
-  .footer-linea {
-    align-self: auto;
-    width: 80%;
-    height: 2px;
-    min-height: 0;
-  }
-}

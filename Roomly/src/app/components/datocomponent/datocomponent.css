@@ -377,39 +377,3 @@
   font-size: 13px;
   line-height: 1.6;
 }
-
-@media (max-width: 850px) {
-  .datos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .datos-resumen {
-    max-width: 100%;
-  }
-
-  .datos-resumen-imagen {
-    height: 260px;
-  }
-}
-
-@media (max-width: 520px) {
-  .datos-pagina {
-    padding: 110px 5% 55px;
-  }
-
-  .datos-formulario {
-    padding: 23px 19px;
-  }
-
-  .datos-resumen-contenido {
-    padding: 22px 19px;
-  }
-
-  .datos-encabezado h1 {
-    font-size: 36px;
-  }
-
-  .datos-resumen-imagen {
-    height: 200px;
-  }
-}
