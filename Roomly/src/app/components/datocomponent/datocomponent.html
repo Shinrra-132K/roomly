@@ -1,4 +1,3 @@
-
 <main class="datos-pagina">
   <section class="datos-contenedor">
 
@@ -9,10 +8,10 @@
     </a>
 
     <header class="datos-encabezado">
-      <span class="datos-etiqueta">ROOMLY · RESERVAS</span>
-      <h1>Datos del titular</h1>
+      <h1>Datos para tu reserva</h1>
       <p>
-        Completa tus datos para registrar la reserva de tu estancia.
+        Completa tus datos para registrar la reserva de tu estancia en este alojamiento. Antes de confirmar, revisa que
+        todo esté correcto.
       </p>
     </header>
 
@@ -25,7 +24,7 @@
 
           <div>
             <h2>Información personal</h2>
-            <p>¿A nombre de quién quedará la reserva?</p>
+            <p>Ingresa los datos con los cuales quedará registrada la reserva.</p>
           </div>
         </div>
 
@@ -44,7 +43,7 @@
               name="titular"
               [(ngModel)]="titular"
               #campoTitular="ngModel"
-              placeholder="Ej. María Fernanda López"
+              placeholder="Ej. Anamaria Perez Olaya"
               minlength="3"
               maxlength="100"
               autocomplete="name"
@@ -54,7 +53,7 @@
               class="datos-error"
               *ngIf="campoTitular.invalid &&
               (campoTitular.dirty || campoTitular.touched)">
-              Ingresa el nombre del titular, con al menos 3 caracteres.
+              Ingresa el nombre completo del titular.
             </small>
           </div>
 
@@ -88,7 +87,7 @@
 
             <p>
               Tus datos se utilizarán para registrar esta reserva
-              en este navegador. No se enviarán a un servidor.
+              en este navegador. Recuerda guardar la información de tu reserva.
             </p>
           </div>
 
@@ -118,9 +117,11 @@
             class="datos-boton"
             [disabled]="formulario.invalid || reservaGuardada">
 
-            {{ reservaGuardada
-            ? 'Reserva confirmada'
-            : 'Confirmar reserva' }}
+            {{
+              reservaGuardada
+                ? 'Reserva confirmada'
+                : 'Confirmar reserva'
+            }}
 
             <span>→</span>
           </button>

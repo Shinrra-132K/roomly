@@ -7,8 +7,8 @@
 }
 
 .datos-pagina {
-  --vino: #6c2c2d;
-  --vino-oscuro: #431a1b;
+  --cafeclaro: #4A3428;
+  --cafeoscuro: #2b1d15;
   --cobre: #a76539;
   --crema: #f8f5ef;
   --arena: #f1e9de;
@@ -39,7 +39,7 @@
   border: 1px solid var(--linea);
   border-radius: 30px;
   background: #fff;
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
@@ -64,7 +64,7 @@
 
 .datos-encabezado h1 {
   margin: 12px 0;
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-family: Georgia, serif;
   font-size: clamp(34px, 5vw, 50px);
   font-weight: normal;
@@ -114,14 +114,14 @@
   place-items: center;
   border-radius: 50%;
   background: var(--arena);
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-family: Georgia, serif;
   font-size: 18px;
 }
 
 .datos-paso h2 {
   margin: 0 0 6px;
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-family: Georgia, serif;
   font-size: 24px;
   font-weight: normal;
@@ -220,7 +220,7 @@
   padding: 14px 20px;
   border: 0;
   border-radius: 12px;
-  background: var(--vino);
+  background: var(--cafeclaro);
   color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -231,7 +231,7 @@
 
 .datos-boton:hover:not(:disabled) {
   transform: translateY(-2px);
-  background: var(--vino-oscuro);
+  background: var(--cafeoscuro);
 }
 
 .datos-boton span {
@@ -290,7 +290,7 @@
 
 .datos-resumen-contenido h2 {
   margin: 9px 0 20px;
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-family: Georgia, serif;
   font-size: 25px;
   font-weight: normal;
@@ -335,7 +335,7 @@
 }
 
 .datos-total strong {
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-family: Georgia, serif;
   font-size: 30px;
   font-weight: normal;
@@ -363,7 +363,7 @@
 .datos-alerta a {
   display: block;
   margin-top: 8px;
-  color: var(--vino);
+  color: var(--cafeclaro);
   font-weight: 700;
 }
 

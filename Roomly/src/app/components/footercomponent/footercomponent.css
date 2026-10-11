@@ -1,15 +1,10 @@
-:host {
-  display: block;
-  background-color: #6c2c2d;
-  font-family: 'Poppins', system-ui, sans-serif;
-}
-
 .footer-contenido {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
   padding: 2.5rem 3rem;
+  background-color: #4A3428 ;
 }
 
 .footer-marca {
@@ -26,7 +21,7 @@
 
 .footer-marca-nombre {
   display: block;
-  color: #F9E6D5;
+  color: #D9993F;
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.1;
@@ -47,7 +42,7 @@
   align-self: stretch;
   width: 2px;
   min-height: 160px;
-  background-color: #FFFFFF;
+  background-color: #d9992b;
 }
 
 .footer-contacto {

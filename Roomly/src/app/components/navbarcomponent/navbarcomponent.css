@@ -11,7 +11,7 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 0.5rem 0.6rem 0.5rem 1rem;
-  background-color: #c7ac99;
+  background-color: #4A3428 ;
   border-radius: 999px;
   font-family: 'Poppins', system-ui, sans-serif;
   transition: transform 0.3s ease;
@@ -25,14 +25,14 @@
 }
 
 .navbar a {
-  color: #7e4b4c;
+  color: #D9993F;
   text-decoration: none;
   font-family: "slither", sans-serif;
 }
 
 .navbar a:focus-visible,
 .navbar-toggle:focus-visible + .navbar-usuario-boton {
-  outline: 3px solid #c7ac99;
+  outline: 3px solid #4A3428 ;
   outline-offset: 3px;
 }
 
@@ -64,17 +64,17 @@
 
 .navbar-link:hover {
   text-decoration: underline;
+  color: #2B1D15;
 }
 
 .navbar-boton {
   padding: 0.55rem 1.1rem;
-  background-color: #c7ac99;
+  background-color: #4A3428 ;
   border-radius: 999px;
   transition: background-color 0.2s ease;
 }
 
 .navbar-boton:hover {
-  background-color: #be8a84;
-  color: black;
+  background-color: #2B1D15;
 }
 

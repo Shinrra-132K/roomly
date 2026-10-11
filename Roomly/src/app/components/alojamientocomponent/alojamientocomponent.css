@@ -1,26 +1,39 @@
-* {
-  box-sizing: border-box;
-}
-
 .explorar {
   min-height: 100vh;
   padding: 45px 6% 70px;
-  background-color: #f8f5ef;
+  background-color: #faf7f2;
   font-family: Arial, Helvetica, sans-serif;
   color: #342b27;
 }
 
 .explorar-encabezado {
-  max-width: 850px;
-  margin: 0 auto 35px;
-  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin-left: 15%;
+  margin-top: 150px;
+  margin-bottom: 70px;
   text-align: center;
+}
+
+.encabezado-texto {
+  flex: 0.8;
+  min-width: 0;
+}
+.encabezado-img {
+  flex: none;
+  width: auto;
+  max-width: 28%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: contain;
 }
 
 .etiqueta {
   display: inline-block;
   margin-bottom: 12px;
-  color: #a76539;
+  color: #d9992b;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -28,7 +41,7 @@
 
 .explorar-encabezado h1 {
   margin: 0 0 15px;
-  color: #6c2c2d;
+  color: #2B1D15;
   font-family: Georgia, serif;
   font-size: clamp(30px, 4vw, 46px);
 }
@@ -36,7 +49,7 @@
 .explorar-encabezado p {
   max-width: 650px;
   margin: auto;
-  color: #746c65;
+  color: #4A3428;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -47,7 +60,7 @@
   align-items: end;
   gap: 18px;
   max-width: 1200px;
-  margin: 0 auto 45px;
+  margin: 0 auto 70px;
   padding: 24px;
   background-color: #fff;
   border: 1px solid #e9dfd3;
@@ -62,7 +75,7 @@
 }
 
 .filtro label {
-  color: #51443d;
+  color: #2B1D15;
   font-size: 13px;
   font-weight: bold;
 }
@@ -77,13 +90,13 @@
   border: 1px solid #ded4c9;
   border-radius: 8px;
   outline: none;
-  color: #342b27;
+  color: #2B1D15;
   font-size: 14px;
 }
 
 .filtro select:focus,
 .filtro input:focus {
-  border-color: #a76539;
+  border-color: #D9993F;
   box-shadow: 0 0 0 3px #a765391a;
 }
 
@@ -92,9 +105,9 @@
   min-height: 45px;
   padding: 0 18px;
   background-color: #fff;
-  border: 1px solid #6c2c2d;
+  border: 1px solid #4A3428;
   border-radius: 8px;
-  color: #6c2c2d;
+  color: #4A3428;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -102,13 +115,14 @@
 
 .boton-limpiar:hover,
 .sin-resultados button:hover {
-  background-color: #6c2c2d;
+  background-color: #4A3428;
   color: #fff;
 }
 
 .resultados {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .resultados-encabezado {
@@ -121,14 +135,14 @@
 
 .resultados-encabezado h2 {
   margin: 0 0 8px;
-  color: #6c2c2d;
+  color: #4A3428;
   font-family: Georgia, serif;
   font-size: 27px;
 }
 
 .resultados-encabezado p {
   margin: 0;
-  color: #81766d;
+  color: #4A3428;
   font-size: 14px;
 }
 
@@ -143,7 +157,7 @@
   background-color: #fff;
   border: 1px solid #ece3da;
   border-radius: 15px;
-  box-shadow: 0 5px 20px #342b270a;
+  box-shadow: 0 2px 20px #d7bd9a;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
@@ -176,9 +190,9 @@
   top: 14px;
   left: 14px;
   padding: 8px 12px;
-  background-color: #fff;
+  background-color: #f5e9cc;
   border-radius: 20px;
-  color: #6c2c2d;
+  color: #4A3428;
   font-size: 12px;
   font-weight: bold;
 }
@@ -189,14 +203,14 @@
 
 .ciudad {
   margin-bottom: 10px;
-  color: #a76539;
+  color: #D9993F;
   font-size: 12px;
   font-weight: bold;
 }
 
 .alojamiento-info h3 {
   margin: 0 0 12px;
-  color: #49362e;
+  color: #2B1D15;
   font-family: Georgia, serif;
   font-size: 20px;
   line-height: 1.35;
@@ -205,7 +219,7 @@
 .descripcion {
   min-height: 60px;
   margin: 0 0 17px;
-  color: #796f67;
+  color: #4A3428;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -217,7 +231,7 @@
   padding: 13px 0;
   border-top: 1px solid #eee6dd;
   border-bottom: 1px solid #eee6dd;
-  color: #65584f;
+  color: #2B1D15;
   font-size: 12px;
 }
 
@@ -230,9 +244,9 @@
 
 .servicios span {
   padding: 6px 9px;
-  background-color: #f6f0e8;
+  background-color: #f5e9cc ;
   border-radius: 6px;
-  color: #6d5a4c;
+  color: #2B1D15;
   font-size: 11px;
 }
 
@@ -244,7 +258,7 @@
 }
 
 .precio {
-  color: #6c2c2d;
+  color: #2B1D15;
   font-size: 18px;
   font-weight: bold;
 }
@@ -252,7 +266,7 @@
 .precio small {
   display: block;
   margin-top: 5px;
-  color: #81766d;
+  color: #2B1D15;
   font-size: 11px;
   font-weight: normal;
 }
@@ -263,8 +277,8 @@
   justify-content: center;
   min-height: 40px;
   padding: 0 13px;
-  background-color: #6c2c2d;
-  border-radius: 8px;
+  background-color: #4A3428;
+  border-radius: 40px;
   color: #fff;
   font-size: 12px;
   font-weight: bold;
@@ -273,7 +287,7 @@
 }
 
 .boton-ver:hover {
-  background-color: #874344;
+  background-color: #2B1D15;
 }
 
 .sin-resultados {
@@ -285,11 +299,11 @@
 }
 
 .sin-resultados h3 {
-  color: #6c2c2d;
+  color: #2B1D15;
 }
 
 .sin-resultados p {
   margin-bottom: 20px;
-  color: #81766d;
+  color: #4A3428;
 }
 

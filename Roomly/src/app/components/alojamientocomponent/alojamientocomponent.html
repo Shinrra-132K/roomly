@@ -1,13 +1,28 @@
-<main class="explorar">
   <section class="explorar-encabezado">
-    <span class="etiqueta">DESCUBRE NUEVOS LUGARES</span>
 
-    <h1>Encuentra tu próximo destino</h1>
+    <img
+      class="encabezado-img encabezado-img-izq"
+      src="/assets/maleta-1.png"
+      alt="maleta 1"
+      decoding="async">
 
-    <p>
-      Explora alojamientos únicos en ciudades como Guatapé,
-      Medellín, Bogotá, Cartagena y muchos otros destinos.
-    </p>
+    <div class="encabezado-texto">
+      <span class="etiqueta">DESCUBRE NUEVOS LUGARES</span>
+
+      <h1>Encuentra tu próximo destino</h1>
+
+      <p>
+        Explora alojamientos únicos en ciudades como Guatapé,
+        Medellín, Bogotá, Cartagena y muchos otros destinos.
+      </p>
+    </div>
+
+    <img
+      class="encabezado-img encabezado-img-der"
+      src="/assets/maleta-2.png"
+      alt="maleta 2"
+      decoding="async">
+
   </section>
 
   <section class="filtros">
@@ -129,7 +144,7 @@
         <div class="alojamiento-info">
 
           <div class="ciudad">
-            📍 {{ alojamiento.ciudad }},
+            {{ alojamiento.ciudad }},
             {{ alojamiento.departamento }}
           </div>
 
@@ -141,11 +156,11 @@
 
           <div class="detalles">
             <span>
-              👥 {{ alojamiento.huespedes }} huéspedes
+              {{ alojamiento.huespedes }} huéspedes
             </span>
 
             <span>
-              ⭐ {{ alojamiento.calificacion }}
+             ★ {{ alojamiento.calificacion }}
             </span>
           </div>
 
@@ -195,5 +210,3 @@
     </div>
 
   </section>
-
-</main>
