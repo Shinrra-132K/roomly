@@ -138,11 +138,14 @@ Roomly/
 │   ├── app/
 │   │   ├── components/
 │   │   │   ├── navbarcomponent/
-│   │   │   ├── homecomponent/
+│   │   │   ├── iniciocomponent/
 │   │   │   ├── alojamientoscomponent/
 │   │   │   ├── detallecomponent/
 │   │   │   ├── datocomponent/
+│   │   │   ├── footercomponent/
 │   │   │   └── reservacomponent/
+│   │   ├── services/
+│   │   │   ├── alojamientoservice/
 │   │   ├── app-routing-module.ts
 │   │   ├── app-module.ts
 │   │   └── app-component.*
@@ -162,10 +165,11 @@ Los nombres y las rutas de los archivos deben corresponder a los que existen rea
 ### Responsabilidades principales
 
 - **Navbarcomponent:** navegación entre las secciones de la aplicación.
-- **Homecomponent:** presentación inicial de Roomly.
+- **Iniciocomponent:** presentación inicial de Roomly.
 - **Alojamientoscomponent:** consulta y presentación del listado de alojamientos.
 - **Detallecomponent:** visualización de la información de un alojamiento y acceso a la reserva.
 - **Datocomponent:** captura de los datos del huésped y registro de la reserva.
+- - **Footercomponent:** seccion inferior de la aplicacion.
 - **Reservacomponent:** consulta de las reservas almacenadas localmente.
 - **AppRoutingModule:** configuración de las rutas de navegación.
 - **AppModule:** declaración y configuración de los componentes y módulos de Angular.
