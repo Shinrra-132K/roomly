@@ -34,6 +34,7 @@ Desarrollar una aplicación web estructurada con Angular que permita consultar a
 - **Angular Router:** navegación entre las vistas de la aplicación.
 - **Canva** entorno de elavoracion del prototipo.
 - **WebtStorm** aplicativo de desarrollo.
+- **Bootstrap** framework de diseño para facilitar la creacion de componentes visuales.
 
 ## 5. Requisitos para ejecutar la aplicación
 
